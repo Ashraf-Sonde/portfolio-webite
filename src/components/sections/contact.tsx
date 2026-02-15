@@ -3,6 +3,7 @@ import { SectionLabel } from '@/components/ui/section-label';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Github, Mail } from 'lucide-react';
 function urlDisplay(url: string): string {
   try {
     const u = new URL(url);
@@ -35,7 +36,7 @@ export function Contact() {
                 asChild
               >
                 <a href={`mailto:${siteConfig.email}`}>
-                  <span className="text-[15px] mr-2">✉</span>
+                  <span className="text-[15px] mr-2"><Mail /></span>
                   {siteConfig.email}
                 </a>
               </Button>
@@ -49,7 +50,7 @@ export function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="text-[15px] mr-2">⌘</span>
+                  <span className="text-[15px] mr-2"><Github /></span>
                   {urlDisplay(siteConfig.github)}
                 </a>
               </Button>
