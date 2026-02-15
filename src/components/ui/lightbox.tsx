@@ -5,6 +5,7 @@ import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { Dialog, DialogPortal, DialogOverlay } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export interface LightboxImage {
   src: string;
@@ -112,11 +113,11 @@ export function Lightbox({ isOpen, title, images, onClose }: LightboxProps) {
               }}
               disabled={index === 0}
               className={cn(
-                'absolute left-3 top-1/2 -translate-y-1/2 h-[34px] w-[34px] rounded-md z-10',
+                'absolute left-3 top-1/2 -translate-y-1/2 h-[34px] w-[34px] rounded-md z-10 cursor-pointer',
                 index === 0 && 'opacity-25 pointer-events-none'
               )}
             >
-              ‹
+              <ChevronLeft className="h-4 w-4" />
             </Button>
             <Button
               variant="secondary"
@@ -127,11 +128,11 @@ export function Lightbox({ isOpen, title, images, onClose }: LightboxProps) {
               }}
               disabled={index === images.length - 1}
               className={cn(
-                'absolute right-3 top-1/2 -translate-y-1/2 h-[34px] w-[34px] rounded-md z-10',
+                'absolute right-3 top-1/2 -translate-y-1/2 h-[34px] w-[34px] rounded-md z-10 cursor-pointer',
                 index === images.length - 1 && 'opacity-25 pointer-events-none'
               )}
             >
-              ›
+              <ChevronRight className="h-4 w-4" />
             </Button>
 
             <span className="absolute bottom-3 right-[14px] font-mono-tight text-[10px] text-muted-foreground px-2 py-[3px] rounded-full border border-border bg-card">

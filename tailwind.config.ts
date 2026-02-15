@@ -26,9 +26,9 @@ const config: Config = {
           dim: '#666666',
         },
         tag: {
-          bg: '#18181b',
-          border: '#27272a',
-          text: '#a1a1aa',
+          bg: 'var(--tag-bg)',
+          border: 'var(--tag-border)',
+          text: 'var(--tag-text)',
         },
         dot: {
           active: '#22c55e',

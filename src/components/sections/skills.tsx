@@ -21,7 +21,7 @@ export function Skills() {
                 </div>
                 <div className="flex flex-wrap gap-[5px]">
                   {group.tags.map((t) => (
-                    <Tag key={t}>{t}</Tag>
+                    <Tag className='py-1 px-2' key={t}>{t}</Tag>
                   ))}
                 </div>
               </CardContent>

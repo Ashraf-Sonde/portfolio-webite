@@ -37,7 +37,7 @@ export function Nav() {
         WebkitBackdropFilter: 'blur(12px)',
       }}
     >
-      <div className="max-w-content mx-auto px-6 md:px-0 h-[52px] flex items-center justify-between">
+      <div className="max-w-content mx-auto px-6 md:px-0 h-[52px] flex items-center justify-between font-mono-tight">
         <Button
           variant="ghost"
           onClick={() => scrollTo('#hero')}

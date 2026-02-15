@@ -11,7 +11,7 @@ export function Writing() {
 
         <Card className="border border-dashed border-border rounded-lg shadow-none bg-transparent">
           <CardContent className="p-9 text-center">
-            <div className="font-mono-tight text-[12px] text-muted-foreground/80 mb-2">
+            <div className=" text-[12px] text-muted-foreground/80 mb-2">
               // coming soon
             </div>
             <p className="text-[14px] text-muted-foreground max-w-[380px] mx-auto mb-5 leading-[1.6]">
@@ -20,7 +20,7 @@ export function Writing() {
             </p>
             <div className="flex flex-wrap gap-[6px] justify-center">
               {writingTopics.map((t) => (
-                <Tag key={t}>{t}</Tag>
+                <Tag className='py-1 px-2' key={t}>{t}</Tag>
               ))}
             </div>
           </CardContent>

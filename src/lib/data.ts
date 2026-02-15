@@ -225,12 +225,10 @@ export const skills = [
 ];
 
 export const writingTopics = [
-  'distributed systems',
-  'database internals',
+  'Distributed systems',
+  'Database internals',
   'API design',
-  'observability',
-  'Go concurrency',
-  'system design',
-  'platform engineering',
-  'kafka patterns',
+  'Observability',
+  'System design',
+  'Platform engineering',
 ];

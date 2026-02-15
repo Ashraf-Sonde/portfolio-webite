@@ -14,9 +14,9 @@
     --text: #e5e5e5;
     --text-muted: #a1a1a1;
     --text-dim: #666666;
-    --tag-bg: #18181b;
-    --tag-border: #27272a;
-    --tag-text: #a1a1aa;
+    --tag-bg: #131c17;
+    --tag-border: #1e2e24;
+    --tag-text: #7dd3a0;
     --dot-active: #22c55e;
     --radius: 8px;
     --radius-sm: 4px;
@@ -54,9 +54,9 @@
     --text: #09090b;
     --text-muted: #71717a;
     --text-dim: #a1a1aa;
-    --tag-bg: #f4f4f5;
-    --tag-border: 0 0% 89.8%;
-    --tag-text: #52525b;
+    --tag-bg: #ecfdf5;
+    --tag-border: #a7f3d0;
+    --tag-text: #047857;
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 98%;

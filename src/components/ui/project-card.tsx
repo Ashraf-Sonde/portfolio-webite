@@ -5,7 +5,7 @@ import {
   ChevronsUpDown,
   ChevronsDownUp,
   Github,
-  ImageIcon,
+  Crop,
 } from 'lucide-react';
 import { Tag } from './tag';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
@@ -104,7 +104,7 @@ export function ProjectCard({
               {bullets.map((b, i) => (
                 <li
                   key={i}
-                  className="font-mono-tight text-[12.5px] text-muted-foreground leading-[1.7] pl-[18px] relative mb-[10px] last:mb-0"
+                  className=" text-[12.5px] text-muted-foreground leading-[1.7] pl-[18px] relative mb-[10px] last:mb-0"
                 >
                   <span className="absolute left-0 top-0 text-muted-foreground/70">
                     ▸
@@ -119,7 +119,7 @@ export function ProjectCard({
         <CardFooter className="px-5 py-3 pb-4 border-t border-border/50 flex flex-col items-start gap-[10px]">
           <div className="flex flex-wrap gap-[6px]">
             {tags.map((t) => (
-              <Tag key={t}>{t}</Tag>
+              <Tag className='py-1 px-2' key={t}>{t}</Tag>
             ))}
           </div>
           <Button
@@ -128,7 +128,7 @@ export function ProjectCard({
             className="font-mono-tight text-[11px] text-muted-foreground hover:text-foreground h-7 px-[10px] rounded-md"
             onClick={() => onOpenLightbox(title, screenshots)}
           >
-            <ImageIcon className="h-3 w-3 mr-1.5" />
+            <Crop className="h-3 w-3 mr-1.5" />
             View Screenshots ({screenshots.length})
           </Button>
         </CardFooter>

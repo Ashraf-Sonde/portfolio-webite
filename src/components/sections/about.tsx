@@ -36,7 +36,7 @@ export function About() {
               className="rounded-none border-0 shadow-none bg-card"
             >
               <CardContent className="py-5 px-5 text-center p-6 pt-6">
-                <span className="font-mono-tight text-[22px] font-semibold tracking-[-0.02em] text-foreground block">
+                <span className="text-[22px] font-semibold tracking-[-0.02em] text-foreground block">
                   {stat.number}
                 </span>
                 <div className="text-[11px] uppercase tracking-[0.08em] text-muted-foreground mt-1">

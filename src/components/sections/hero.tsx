@@ -11,13 +11,13 @@ export function Hero() {
         <Badge
           variant="secondary"
           className={cn(
-            'status-dot fade-up font-mono-tight text-[11px] text-muted-foreground bg-card border border-border rounded-full px-3 py-[5px] tracking-[0.04em] mb-6 font-normal'
+            'status-dot fade-up  text-[11px] text-muted-foreground bg-card border border-border rounded-full px-3 py-[5px] tracking-[0.04em] mb-6 font-normal'
           )}
         >
           {siteConfig.status}
         </Badge>
 
-        <div className="hero-eyebrow fade-up fade-up-1 font-mono-tight text-[12px] text-muted-foreground/80 tracking-[0.08em] mb-5 flex items-center gap-2">
+        <div className="hero-eyebrow fade-up fade-up-1  text-[12px] text-muted-foreground/80 tracking-[0.08em] mb-5 flex items-center gap-2">
           {siteConfig.title}
         </div>
 
@@ -31,7 +31,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <div className="fade-up fade-up-2 font-mono-tight text-[14px] text-muted-foreground mb-6 leading-[1.5]">
+        <div className="fade-up fade-up-2 font-mono-tight text-[14px] text-[--dot-active] mb-6 leading-[1.5]">
           {siteConfig.tagline}
         </div>
 
