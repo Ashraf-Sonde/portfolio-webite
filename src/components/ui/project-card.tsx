@@ -109,7 +109,7 @@ export function ProjectCard({
                   <span className="absolute left-0 top-0 text-muted-foreground/70">
                     ▸
                   </span>
-                  <span dangerouslySetInnerHTML={{ __html: b }} />
+                  <span className='font-mono-tight' dangerouslySetInnerHTML={{ __html: b }} />
                 </li>
               ))}
             </ul>

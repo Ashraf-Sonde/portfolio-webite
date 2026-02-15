@@ -8,7 +8,7 @@ export function About() {
       <div className="max-w-content mx-auto px-6">
         <SectionLabel>About</SectionLabel>
 
-        <p className="text-[15px] text-muted-foreground leading-[1.8] max-w-[100%] text-justify">
+        <p className="font-mono-tight text-[12px] text-muted-foreground leading-[1.8] max-w-[100%] text-justify">
           I&apos;m a{' '}
           <strong className="text-foreground font-medium">
             backend-focused engineer with {aboutStats[0].number} {aboutStats[0].label} of experience
