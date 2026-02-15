@@ -1,6 +1,6 @@
 import { experience } from '@/lib/data';
 import { SectionLabel } from '@/components/ui/section-label';
-import { AccordionCard } from '@/components/ui/accordion-card';
+import { ExperienceCard } from '@/components/ui/experience-card';
 import { Card } from '@/components/ui/card';
 import Image from 'next/image';
 
@@ -11,7 +11,7 @@ export function Experience() {
         <SectionLabel>Work Experience</SectionLabel>
 
         <div className="space-y-9">
-          {experience.map((company) => (
+          {experience.map((company, companyIndex) => (
             <div key={company.company}>
               <div className="flex items-center gap-[10px] mb-4">
                 <Card className="w-7 h-7 rounded-md flex items-center justify-center text-[12px] border border-border bg-card shadow-none p-0 min-w-[28px] min-h-[28px]">
@@ -31,12 +31,13 @@ export function Experience() {
                 )}
               </div>
 
-              {company.roles.map((role) => (
-                <AccordionCard
+              {company.roles.map((role, roleIndex) => (
+                <ExperienceCard
                   key={role.title}
                   icon={role.icon}
                   title={role.title}
                   meta={`${role.type} · ${role.period}`}
+                  defaultOpen={companyIndex === 0 && roleIndex === 0}
                   bullets={role.bullets}
                   tags={role.tags}
                 />

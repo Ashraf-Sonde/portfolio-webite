@@ -98,7 +98,7 @@ export function ProjectCard({
           </Button>
         </CollapsibleTrigger>
 
-        <CollapsibleContent>
+        <CollapsibleContent className="overflow-hidden data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up">
           <CardContent className="px-5 py-[14px] pb-4 pt-4 border-t border-border/50">
             <ul className="list-none p-0 m-0">
               {bullets.map((b, i) => (

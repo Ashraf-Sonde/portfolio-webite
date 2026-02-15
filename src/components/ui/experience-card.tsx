@@ -20,7 +20,7 @@ interface AccordionCardProps {
   tags: string[];
 }
 
-export function AccordionCard({
+export function ExperienceCard({
   icon,
   title,
   meta,
@@ -58,7 +58,7 @@ export function AccordionCard({
             </div>
           </Button>
         </CollapsibleTrigger>
-        <CollapsibleContent>
+        <CollapsibleContent className="overflow-hidden data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up">
           <CardContent className="px-5 pb-5 pt-0 border-t border-border/50">
             <ul className="list-none p-0 m-0 mt-4">
               {bullets.map((b, i) => (

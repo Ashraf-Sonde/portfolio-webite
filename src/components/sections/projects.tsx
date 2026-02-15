@@ -23,13 +23,13 @@ export function Projects() {
         <SectionLabel>Projects ({projects.length})</SectionLabel>
 
         <div className="flex flex-col gap-3">
-          {projects.map((project) => (
+          {projects.map((project, projectIndex) => (
             <ProjectCard
               key={project.id}
               icon={project.icon}
               title={project.title}
               tagline={project.tagline}
-              defaultOpen={project.defaultOpen}
+              defaultOpen={projectIndex === 0}
               github={project.github}
               bullets={project.bullets}
               tags={project.tags}

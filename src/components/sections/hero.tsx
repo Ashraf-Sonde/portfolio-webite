@@ -1,7 +1,7 @@
 import { siteConfig } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Github, Download, Mail } from 'lucide-react';
+import { Github, Download, Mail, Linkedin } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export function Hero() {
@@ -48,38 +48,53 @@ export function Hero() {
           doesn&apos;t embarrass it.
         </p>
 
-        <div className="fade-up fade-up-4 flex gap-[10px] flex-wrap">
+        <div className="fade-up fade-up-4 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-[10px]">
           <Button
             asChild
-            className="font-mono-tight text-[12px] h-9 px-4 rounded-md"
+            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center"
           >
             <a
               href={siteConfig.github}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github className="h-3.5 w-3.5 mr-1.5" />
-              View GitHub
+              <Github className="h-3.5 w-3.5 mr-1.5 shrink-0" />
+              <span className="truncate">GitHub</span>
             </a>
           </Button>
           <Button
             variant="outline"
             asChild
-            className="font-mono-tight text-[12px] h-9 px-4 rounded-md text-muted-foreground hover:text-foreground"
+            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground hover:text-foreground justify-center"
           >
-            <a href={siteConfig.resume}>
-              <Download className="h-3.5 w-3.5 mr-1.5" />
-              Download Resume
+            <a href={siteConfig.resume} className="flex items-center justify-center">
+              <Download className="h-3.5 w-3.5 mr-1.5 shrink-0" />
+              <span className="truncate">Resume</span>
             </a>
           </Button>
           <Button
             variant="outline"
             asChild
-            className="font-mono-tight text-[12px] h-9 px-4 rounded-md text-muted-foreground hover:text-foreground"
+            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground hover:text-foreground justify-center"
           >
-            <a href="#contact">
-              <Mail className="h-3.5 w-3.5 mr-1.5" />
-              Contact
+            <a
+              href={siteConfig.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <span className="mr-1.5 shrink-0">in</span>
+              <span className="truncate">LinkedIn</span>
+            </a>
+          </Button>
+          <Button
+            variant="outline"
+            asChild
+            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground hover:text-foreground justify-center"
+          >
+            <a href="#contact" className="flex items-center justify-center">
+              <Mail className="h-3.5 w-3.5 mr-1.5 shrink-0" />
+              <span className="truncate">Contact</span>
             </a>
           </Button>
         </div>

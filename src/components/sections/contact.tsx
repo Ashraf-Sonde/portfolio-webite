@@ -3,7 +3,7 @@ import { SectionLabel } from '@/components/ui/section-label';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Github, Mail } from 'lucide-react';
+import { Github, Linkedin, LinkedinIcon, Mail } from 'lucide-react';
 function urlDisplay(url: string): string {
   try {
     const u = new URL(url);
