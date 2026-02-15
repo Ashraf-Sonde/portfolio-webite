@@ -1,28 +1,28 @@
 export const siteConfig = {
   name: 'Ashraf Sonde',
   initials: 'AS',
-  domain: 'ashrafsonde.dev',
+  domain: 'ashrafsonde.me',
   title: 'Senior Software Engineer',
   tagline: 'Building scalable backend systems & distributed infrastructure',
   description:
     'Senior Software Engineer specializing in scalable distributed systems, backend architecture, and platform reliability.',
   status: 'Open to backend & platform roles',
-  github: 'https://github.com',
-  linkedin: 'https://linkedin.com',
-  email: 'john@johnsmith.dev',
+  github: 'https://github.com/Ashraf-Sonde',
+  linkedin: 'https://linkedin.com/in/ashraf-sonde',
+  email: 'outreach.ashraf@gmail.com',
   resume: '#',
 };
 
 export const aboutStats = [
-  { number: '7+', label: 'Years' },
+  { number: '5+', label: 'Years' },
   { number: '4', label: 'Companies' },
-  { number: '10M+', label: 'Req / day' },
+  { number: '12+', label: 'Projects' },
 ];
 
 export const experience = [
   {
     company: 'Apex Systems',
-    icon: '🏢',
+    icon: 'https://techstalwarts.com/assets/images/favicon.png',
     active: true,
     roles: [
       {
@@ -49,7 +49,7 @@ export const experience = [
   },
   {
     company: 'Meridian Labs',
-    icon: '🔷',
+    icon: 'https://www.cloudesign.com/favicon.ico',
     active: false,
     roles: [
       {
