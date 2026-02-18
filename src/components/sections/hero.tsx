@@ -35,7 +35,7 @@ export function Hero() {
           {siteConfig.tagline}
         </div>
 
-        <p className="fade-up fade-up-3 text-[16px] text-muted-foreground max-w-[100%] text-justify leading-[1.7] mb-9">
+        <p className="fade-up fade-up-3 text-[16px] text-muted-foreground max-w-[100%] text-justify leading-[1.5] tracking-[1px] mb-9">
           I design systems that handle{' '}
           <strong className="text-foreground font-medium">
             millions of requests
@@ -49,6 +49,7 @@ export function Hero() {
         </p>
 
         <div className="fade-up fade-up-4 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-[10px]">
+          {/* Github btn */}
           <Button
             asChild
             className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center"
@@ -62,20 +63,11 @@ export function Hero() {
               <span className="truncate">GitHub</span>
             </a>
           </Button>
+
+          {/* LinkedIn btn */}
           <Button
-            variant="outline"
             asChild
-            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground hover:text-foreground justify-center"
-          >
-            <a href={siteConfig.resume} className="flex items-center justify-center">
-              <Download className="h-3.5 w-3.5 mr-1.5 shrink-0" />
-              <span className="truncate">Resume</span>
-            </a>
-          </Button>
-          <Button
-            variant="outline"
-            asChild
-            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground hover:text-foreground justify-center"
+            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center bg-[#0d65c3] text-white hover:bg-[#0a54a0] border-0"
           >
             <a
               href={siteConfig.linkedin}
@@ -87,6 +79,20 @@ export function Hero() {
               <span className="truncate">LinkedIn</span>
             </a>
           </Button>
+
+          {/* Resume btn */}
+          <Button
+            variant="outline"
+            asChild
+            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground hover:text-foreground justify-center"
+          >
+            <a href={siteConfig.resume} className="flex items-center justify-center">
+              <Download className="h-3.5 w-3.5 mr-1.5 shrink-0" />
+              <span className="truncate">Resume</span>
+            </a>
+          </Button>
+
+          {/* Contact btn */}
           <Button
             variant="outline"
             asChild
