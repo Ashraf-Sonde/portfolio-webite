@@ -31,7 +31,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <div className="fade-up fade-up-2 font-mono-tight text-[14px] text-[--dot-active] mb-6 leading-[1.5]">
+        <div className="fade-up fade-up-2 text-base text-balance text-[--dot-active] mb-6 leading-[1.5]">
           {siteConfig.tagline}
         </div>
 
@@ -67,7 +67,7 @@ export function Hero() {
           {/* LinkedIn btn */}
           <Button
             asChild
-            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center bg-[#0d65c3] text-white hover:bg-[#0a54a0] border-0"
+            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center bg-[#0d65c3] text-white hover:bg-[#0a54a0]"
           >
             <a
               href={siteConfig.linkedin}
@@ -80,27 +80,25 @@ export function Hero() {
             </a>
           </Button>
 
-          {/* Resume btn */}
-          <Button
-            variant="outline"
-            asChild
-            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground hover:text-foreground justify-center"
-          >
-            <a href={siteConfig.resume} className="flex items-center justify-center">
-              <Download className="h-3.5 w-3.5 mr-1.5 shrink-0" />
-              <span className="truncate">Resume</span>
-            </a>
-          </Button>
-
           {/* Contact btn */}
           <Button
-            variant="outline"
             asChild
-            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground hover:text-foreground justify-center"
+            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-amber-500 hover:bg-amber-500/90 text-black"
           >
             <a href="#contact" className="flex items-center justify-center">
               <Mail className="h-3.5 w-3.5 mr-1.5 shrink-0" />
               <span className="truncate">Contact</span>
+            </a>
+          </Button>
+
+          {/* Resume btn */}
+          <Button
+            asChild
+            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-neutral-500 hover:bg-neutral-500/90 text-white"
+          >
+            <a href={siteConfig.resume} className="flex items-center justify-center">
+              <Download className="h-3.5 w-3.5 mr-1.5 shrink-0" />
+              <span className="truncate">Resume</span>
             </a>
           </Button>
         </div>

@@ -31,9 +31,8 @@ export function Contact() {
 
             <div className="flex flex-col gap-2">
               <Button
-                variant="outline"
-                className="justify-start h-auto py-2 px-3 font-mono-tight text-[13px] text-muted-foreground hover:text-foreground bg-card"
                 asChild
+                className="justify-start h-auto py-2 px-3 font-mono-tight text-[13px] bg-card bg-amber-500 hover:bg-amber-500/90 text-black"
               >
                 <a href={`mailto:${siteConfig.email}`}>
                   <span className="text-[15px] mr-2"><Mail /></span>
@@ -41,22 +40,20 @@ export function Contact() {
                 </a>
               </Button>
               <Button
-                variant="outline"
-                className="justify-start h-auto py-2 px-3 font-mono-tight text-[13px] text-muted-foreground hover:text-foreground bg-card"
                 asChild
+                className="font-mono-tight text-[13px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-start"
               >
                 <a
                   href={siteConfig.github}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="text-[15px] mr-2"><Github /></span>
-                  {urlDisplay(siteConfig.github)}
+                  <Github className="h-3.5 w-3.5 mr-1.5 shrink-0" />
+                  <span className="truncate">{urlDisplay(siteConfig.github)}</span>
                 </a>
               </Button>
               <Button
-                variant="outline"
-                className="justify-start h-auto py-2 px-3 font-mono-tight text-[13px] text-muted-foreground hover:text-foreground bg-card"
+                className="justify-start h-auto py-2 px-3 font-mono-tight text-[13px] bg-[#0d65c3] text-white hover:bg-[#0a54a0]"
                 asChild
               >
                 <a
