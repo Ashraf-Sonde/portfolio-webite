@@ -11,13 +11,13 @@ export function Hero() {
         <Badge
           variant="secondary"
           className={cn(
-            'status-dot fade-up  text-[11px] text-muted-foreground bg-card border border-border rounded-full px-3 py-[5px] tracking-[0.04em] mb-6 font-normal'
+            'status-dot fade-up  text-[12px] text-muted-foreground bg-card border border-border rounded-full px-3 py-[5px] tracking-[0.04em] mb-6 font-normal'
           )}
         >
           {siteConfig.status}
         </Badge>
 
-        <div className="hero-eyebrow fade-up fade-up-1  text-[12px] text-muted-foreground/80 tracking-[0.08em] mb-5 flex items-center gap-2">
+        <div className="hero-eyebrow fade-up fade-up-1  text-[14px] text-muted-foreground/80 tracking-[0.08em] mb-5 flex items-center gap-2">
           {siteConfig.title}
         </div>
 
@@ -35,7 +35,7 @@ export function Hero() {
           {siteConfig.tagline}
         </div>
 
-        <p className="fade-up fade-up-3 text-[16px] text-muted-foreground max-w-[100%] text-justify leading-[1.5] tracking-[1px] mb-9">
+        <p className="fade-up fade-up-3 text-base text-balance text-muted-foreground max-w-[100%] leading-[1.5] mb-9">
           I design systems that handle{' '}
           <strong className="text-foreground font-medium">
             millions of requests
