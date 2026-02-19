@@ -32,7 +32,7 @@ export function ExperienceCard({
 
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
-      <Card className="rounded-lg border-border bg-card overflow-hidden mb-3 last:mb-0 shadow-none">
+      <Card className="rounded-lg border-border bg-card overflow-hidden my-3 last:mb-0 shadow-none">
         <CollapsibleTrigger asChild>
           <Button
             variant="ghost"
@@ -75,7 +75,7 @@ export function ExperienceCard({
             </ul>
             <div className="flex flex-wrap gap-[6px] mt-3">
               {tags.map((t) => (
-                <Tag className='py-1 px-2' key={t}>{t}</Tag>
+                <Tag key={t}>{t}</Tag>
               ))}
             </div>
           </CardContent>

@@ -9,7 +9,7 @@ export const siteConfig = {
   status: 'Open to backend & platform roles',
   github: 'https://github.com/Ashraf-Sonde',
   linkedin: 'https://linkedin.com/in/ashraf-sonde',
-  email: 'outreach.ashraf@gmail.com',
+  email: 'b3V0cmVhY2guYXNocmFmQGdtYWlsLmNvbQ==',
   resume: '#',
 };
 
@@ -29,6 +29,26 @@ export const experience = [
         title: 'Staff Backend Engineer',
         type: 'Full-time',
         period: '03.2022 – Present',
+        icon: '⚙️',
+        bullets: [
+          'Rearchitected the core payments pipeline from a monolith to event-driven microservices, reducing p99 latency from 1.8s to 210ms under peak load.',
+          'Led system design for a multi-region failover setup that brought downtime from ~4 hours/year to under 12 minutes.',
+          'Introduced internal platform tooling that cut new service onboarding time from 2 weeks to under a day.',
+        ],
+        tags: [
+          'Go',
+          'Kafka',
+          'PostgreSQL',
+          'Redis',
+          'Kubernetes',
+          'AWS',
+          'gRPC',
+        ],
+      },
+      {
+        title: 'Associate Backend Engineer',
+        type: 'Full-time',
+        period: '03.2021 – 03.2022',
         icon: '⚙️',
         bullets: [
           'Rearchitected the core payments pipeline from a monolith to event-driven microservices, reducing p99 latency from 1.8s to 210ms under peak load.',

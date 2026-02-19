@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="border-t border-border py-8">
       <div className="max-w-content mx-auto px-6 flex items-center justify-between gap-3 flex-wrap">
         <span className="font-mono-tight text-[11px] text-muted-foreground flex items-center justify-center gap-1">
-         <Copyright className="h-3 w-3" /> <span>Copyright {new Date().getFullYear()} {siteConfig.name}.</span>
+         <Copyright className="h-4 w-4" /> <span>Copyright {new Date().getFullYear()} - {siteConfig.name}.</span>
         </span>
         <Button
           variant="link"
