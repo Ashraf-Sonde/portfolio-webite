@@ -14,8 +14,8 @@ export function Experience() {
           {experience.map((company, companyIndex) => (
             <div key={company.company}>
               <div className="flex items-center gap-[10px] mb-4">
-                <Card className="w-7 h-7 rounded-md flex items-center justify-center text-[12px] border border-border bg-card shadow-none p-0 min-w-[28px] min-h-[28px]">
-                  <Image src={company.icon} alt={company.company} width={12} height={12} className="object-contain" />
+                <Card className="w-9 h-9 rounded-md flex items-center justify-center text-[12px] border border-border bg-card shadow-none p-0 min-w-[28px] min-h-[28px]">
+                  <Image src={company.icon} alt={company.company} width={18} height={18} className="object-contain" />
                 </Card>
                 <span className="text-[16px] font-semibold text-foreground">
                   {company.company}
