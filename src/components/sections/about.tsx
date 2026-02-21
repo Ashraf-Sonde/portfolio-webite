@@ -8,7 +8,7 @@ export function About() {
       <div className="max-w-content mx-auto px-6">
         <SectionLabel>About</SectionLabel>
 
-        <p className="text-base text-muted-foreground leading-[1.8] max-w-[100%]">
+        <p className="text-base text-pretty text-muted-foreground leading-[1.8] max-w-[100%]">
           I&apos;m a{' '}
           <strong className="text-foreground font-medium">
             backend-focused engineer with {aboutStats[0].number} {aboutStats[0].label} of experience
@@ -19,7 +19,7 @@ export function About() {
           infrastructure that holds it all together.
         </p>
 
-        <p className="text-base text-muted-foreground leading-[1.8] max-w-[100%] mt-[1rem]">
+        <p className="text-base text-pretty text-muted-foreground leading-[1.8] max-w-[100%] mt-[1rem]">
           I understand{' '}
           <strong className="text-foreground font-medium">
             system design tradeoffs
@@ -39,7 +39,7 @@ export function About() {
                 <span className="text-[22px] font-semibold tracking-[-0.02em] text-foreground block">
                   {stat.number}
                 </span>
-                <div className="text-[11px] uppercase tracking-[0.08em] text-muted-foreground mt-1">
+                <div className="text-[12px] uppercase tracking-[0.08em] text-muted-foreground mt-1">
                   {stat.label}
                 </div>
               </CardContent>

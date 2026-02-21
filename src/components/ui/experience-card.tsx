@@ -45,7 +45,7 @@ export function ExperienceCard({
               <div className="text-[14px] font-semibold text-foreground mb-[3px]">
                 {title}
               </div>
-              <div className="font-mono-tight text-[11px] text-muted-foreground flex items-center gap-2 flex-wrap">
+              <div className="font-mono-tight text-[12px] text-muted-foreground flex items-center gap-2 flex-wrap">
                 {meta}
               </div>
             </div>

@@ -67,7 +67,7 @@ export function ProjectCard({
               <div className="text-[14px] font-semibold text-foreground mb-1">
                 {title}
               </div>
-              <div className="font-mono-tight text-[11px] text-muted-foreground leading-[1.5]">
+              <div className="font-mono-tight text-[12px] text-pretty text-muted-foreground leading-[1.5]">
                 {tagline}
               </div>
             </div>
@@ -125,7 +125,7 @@ export function ProjectCard({
           <Button
             variant="outline"
             size="sm"
-            className="font-mono-tight text-[11px] text-muted-foreground hover:text-foreground h-7 px-[10px] rounded-md"
+            className="font-mono-tight text-[12px] text-muted-foreground hover:text-foreground h-7 px-[10px] rounded-md"
             onClick={() => onOpenLightbox(title, screenshots)}
           >
             <Crop className="h-3 w-3 mr-1.5" />

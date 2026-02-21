@@ -16,7 +16,7 @@ export function Skills() {
               className="rounded-lg border-border bg-card shadow-none"
             >
               <CardContent className="p-[18px]">
-                <div className="skill-label font-mono-tight text-[11px] uppercase tracking-[0.1em] text-muted-foreground mb-3 flex items-center gap-[7px]">
+                <div className="skill-label font-mono-tight text-[12px] uppercase tracking-[0.1em] text-muted-foreground mb-3 flex items-center gap-[7px]">
                   {group.label}
                 </div>
                 <div className="flex flex-wrap gap-[5px]">

@@ -82,7 +82,7 @@ export function Contact() {
               <div className="flex flex-col gap-1 flex-1">
                 <label
                   htmlFor="contact-name"
-                  className="font-mono-tight text-[11px] uppercase tracking-[0.06em] text-muted-foreground"
+                  className="font-mono-tight text-[12px] uppercase tracking-[0.06em] text-muted-foreground"
                 >
                   Name
                 </label>
@@ -97,7 +97,7 @@ export function Contact() {
               <div className="flex flex-col gap-1 flex-1">
                 <label
                   htmlFor="contact-email"
-                  className="font-mono-tight text-[11px] uppercase tracking-[0.06em] text-muted-foreground"
+                  className="font-mono-tight text-[12px] uppercase tracking-[0.06em] text-muted-foreground"
                 >
                   Email
                 </label>
@@ -115,7 +115,7 @@ export function Contact() {
             <div className="flex flex-col gap-1">
               <label
                 htmlFor="contact-message"
-                className="font-mono-tight text-[11px] uppercase tracking-[0.06em] text-muted-foreground"
+                className="font-mono-tight text-[12px] uppercase tracking-[0.06em] text-muted-foreground"
               >
                 Message
               </label>

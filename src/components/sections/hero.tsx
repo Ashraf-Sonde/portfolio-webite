@@ -35,7 +35,7 @@ export function Hero() {
           {siteConfig.tagline}
         </div>
 
-        <p className="fade-up fade-up-3 text-base text-balance text-muted-foreground max-w-[100%] leading-[1.5] mb-9">
+        <p className="fade-up fade-up-3 text-base text-pretty text-muted-foreground max-w-[100%] leading-[1.5] mb-9">
           I design systems that handle{' '}
           <strong className="text-foreground font-medium">
             millions of requests
