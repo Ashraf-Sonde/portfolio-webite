@@ -22,7 +22,7 @@ export const aboutStats = [
 export const experience = [
   {
     company: 'Cloudesign Technology Pvt Ltd',
-    icon: 'https://www.cloudesign.com/favicon.ico',
+    icon: '/assets/logos/cloudesign.png',
     active: true,
     roles: [
       {
@@ -53,7 +53,7 @@ export const experience = [
   },
   {
     company: 'Karma AI',
-    icon: 'https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://karma.law&size=256',
+    icon: '/assets/logos/karma.png',
     active: false,
     roles: [
       {
@@ -83,7 +83,7 @@ export const experience = [
   },
   {
     company: 'Techstalwarts',
-    icon: 'https://techstalwarts.com/assets/images/favicon.png',
+    icon: '/assets/logos/techstalwarts.png',
     active: false,
     roles: [
       {
@@ -134,7 +134,7 @@ export const experience = [
   },
   {
     company: 'Techpaathshala',
-    icon: '',
+    icon: '/assets/logos/techpaathshala.png',
     active: false,
     roles: [
       {
@@ -163,7 +163,7 @@ export const experience = [
   },
   {
     company: 'DzineBee',
-    icon: '/assets/logos/dzinebee.jpeg',
+    icon: '/assets/logos/dzinebee.png',
     active: false,
     roles: [
       {

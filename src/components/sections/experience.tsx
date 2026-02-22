@@ -18,8 +18,8 @@ export function Experience() {
                   <Image
                     src={company.icon}
                     alt={company.company}
-                    width={18}
-                    height={18}
+                    width={26}
+                    height={26}
                     className="object-contain"
                   />
                 </Card>
