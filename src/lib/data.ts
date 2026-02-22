@@ -132,6 +132,67 @@ export const experience = [
       },
     ],
   },
+  {
+    company: 'Techpaathshala',
+    icon: '',
+    active: false,
+    roles: [
+      {
+        title: 'Technical Consultant',
+        type: 'Part-time',
+        period: '06.2023 – 12.2023',
+        icon: '⚡',
+        bullets: [
+          'Mentored students in React and Node.js, enhancing their technical proficiency and confidence through personalized guidance.',
+          'Conducted hands-on sessions on JavaScript fundamentals and problem-solving, fostering critical thinking and full-stack development expertise.',
+        ],
+        tags: [
+          'Problem Solving',
+          'Critical Thinking',
+          'DSA',
+          'JavaScript',
+          'React',
+          'Node.js',
+          'Full-stack Development',
+          'Mentoring',
+          'Teaching',
+          'Training',
+        ],
+      },
+    ],
+  },
+  {
+    company: 'DzineBee',
+    icon: '/assets/logos/dzinebee.jpeg',
+    active: false,
+    roles: [
+      {
+        title: 'Junior Software Engineer',
+        type: 'Full-time',
+        period: '04.2021 – 04.2022',
+        icon: '⚡',
+        bullets: [
+          'Developed and deployed scalable e-commerce platforms, driving a 34% increase in client store sales through optimized web solutions.',
+          'Designed and implemented high-performance web applications using WordPress, WooCommerce, PHP, JavaScript, SCSS, and Docker, ensuring seamless functionality.',
+        ],
+        tags: [
+          'PHP',
+          'Wordpress',
+          'WooCommerce',
+          'MySQL',
+          'Web Development',
+          'HTML5',
+          'CSS3',
+          'JavaScript',
+          'SCSS',
+          'Docker',
+          'SEO',
+          'AWS',
+          'Cloudflare',
+        ],
+      },
+    ],
+  },
 ];
 
 export const projects = [
@@ -248,15 +309,15 @@ export const projects = [
 export const skills = [
   {
     label: 'Backend',
-    tags: ['Go', 'Node.js', 'TypeScript', 'Python', 'REST', 'gRPC', 'GraphQL'],
+    tags: ['Node.js', 'Nest.js', 'TypeScript', 'REST', 'Microservices', 'Python', 'PHP'],
   },
   {
     label: 'Databases',
-    tags: ['PostgreSQL', 'MySQL', 'Redis', 'ClickHouse', 'MongoDB', 'SQLite'],
+    tags: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'],
   },
   {
     label: 'Cloud / Infra',
-    tags: ['AWS', 'GCP', 'Kubernetes', 'Docker', 'Kafka', 'NGINX', 'Terraform'],
+    tags: ['AWS', 'GCP', 'Docker', 'RabbitMQ', 'NGINX', 'Apache2', 'PM2'],
   },
   {
     label: 'Frontend',
