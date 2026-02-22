@@ -48,7 +48,7 @@ export const experience = [
           'System Design',
           'Performance Optimization',
         ],
-      }
+      },
     ],
   },
   {
@@ -309,7 +309,15 @@ export const projects = [
 export const skills = [
   {
     label: 'Backend',
-    tags: ['Node.js', 'Nest.js', 'TypeScript', 'REST', 'Microservices', 'Python', 'PHP'],
+    tags: [
+      'Node.js',
+      'Nest.js',
+      'TypeScript',
+      'REST',
+      'Microservices',
+      'Python',
+      'PHP',
+    ],
   },
   {
     label: 'Databases',

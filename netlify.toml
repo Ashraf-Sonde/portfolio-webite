@@ -1,0 +1,9 @@
+[build]
+  publish = "out"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/"
+  to = "/#contact"
+  status = 302
+  force = true

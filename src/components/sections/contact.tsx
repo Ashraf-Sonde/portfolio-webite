@@ -26,7 +26,7 @@ export function Contact() {
             <h3 className="text-[20px] font-semibold tracking-[-0.02em] mb-[10px] text-foreground">
               Let&apos;s work together
             </h3>
-            <p className="font-mono-tight text-[14px] text-muted-foreground mb-6">
+            <p className="text-[14px] text-muted-foreground mb-6">
               Open to senior/staff backend roles, platform engineering, and
               founding engineer opportunities. Remote-first. Drop me a line.
             </p>
@@ -37,7 +37,9 @@ export function Contact() {
                 className="justify-start h-auto py-2 px-3 font-mono-tight text-[13px] bg-card bg-amber-500 hover:bg-amber-500/90 text-black"
               >
                 <a href={`mailto:${getEmail()}`}>
-                  <span className="text-[15px] mr-2"><Mail /></span>
+                  <span className="text-[15px] mr-2">
+                    <Mail />
+                  </span>
                   {getEmail()}
                 </a>
               </Button>
@@ -51,7 +53,9 @@ export function Contact() {
                   rel="noopener noreferrer"
                 >
                   <Github className="h-3.5 w-3.5 mr-1.5 shrink-0" />
-                  <span className="truncate">{urlDisplay(siteConfig.github)}</span>
+                  <span className="truncate">
+                    {urlDisplay(siteConfig.github)}
+                  </span>
                 </a>
               </Button>
               <Button
@@ -74,9 +78,11 @@ export function Contact() {
             name="contact"
             method="POST"
             data-netlify="true"
+            data-netlify-honeypot="bot-field"
             className="flex flex-col gap-[10px]"
           >
             <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
 
             <div className="flex gap-[10px]">
               <div className="flex flex-col gap-1 flex-1">

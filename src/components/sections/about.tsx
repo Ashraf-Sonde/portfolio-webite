@@ -11,7 +11,8 @@ export function About() {
         <p className="text-base text-pretty text-muted-foreground leading-[1.8] max-w-[100%]">
           I&apos;m a{' '}
           <strong className="text-foreground font-medium">
-            backend-focused engineer with {aboutStats[0].number} {aboutStats[0].label} of experience
+            backend-focused engineer with {aboutStats[0].number}{' '}
+            {aboutStats[0].label} of experience
           </strong>{' '}
           designing systems that are fast, predictable, and operationally
           simple. I&apos;ve spent most of that time on the server side —

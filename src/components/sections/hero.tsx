@@ -96,7 +96,10 @@ export function Hero() {
             asChild
             className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-neutral-500 hover:bg-neutral-500/90 text-white"
           >
-            <a href={siteConfig.resume} className="flex items-center justify-center">
+            <a
+              href={siteConfig.resume}
+              className="flex items-center justify-center"
+            >
               <Download className="h-3.5 w-3.5 mr-1.5 shrink-0" />
               <span className="truncate">Resume</span>
             </a>

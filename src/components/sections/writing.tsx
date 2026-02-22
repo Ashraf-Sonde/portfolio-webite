@@ -20,7 +20,9 @@ export function Writing() {
             </p>
             <div className="flex flex-wrap gap-[6px] justify-center">
               {writingTopics.map((t) => (
-                <Tag className='py-1 px-2' key={t}>{t}</Tag>
+                <Tag className="py-1 px-2" key={t}>
+                  {t}
+                </Tag>
               ))}
             </div>
           </CardContent>

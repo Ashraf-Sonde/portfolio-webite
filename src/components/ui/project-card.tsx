@@ -1,12 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import {
-  ChevronsUpDown,
-  ChevronsDownUp,
-  Github,
-  Crop,
-} from 'lucide-react';
+import { ChevronsUpDown, ChevronsDownUp, Github, Crop } from 'lucide-react';
 import { Tag } from './tag';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import {
@@ -109,7 +104,10 @@ export function ProjectCard({
                   <span className="absolute left-0 top-0 text-muted-foreground/70">
                     ▸
                   </span>
-                  <span className='font-mono-tight' dangerouslySetInnerHTML={{ __html: b }} />
+                  <span
+                    className="font-mono-tight"
+                    dangerouslySetInnerHTML={{ __html: b }}
+                  />
                 </li>
               ))}
             </ul>
@@ -119,7 +117,9 @@ export function ProjectCard({
         <CardFooter className="px-5 py-3 pb-4 border-t border-border/50 flex flex-col items-start gap-[10px]">
           <div className="flex flex-wrap gap-[6px]">
             {tags.map((t) => (
-              <Tag className='py-1 px-2' key={t}>{t}</Tag>
+              <Tag className="py-1 px-2" key={t}>
+                {t}
+              </Tag>
             ))}
           </div>
           <Button
