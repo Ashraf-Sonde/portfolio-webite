@@ -62,9 +62,9 @@ export const experience = [
         period: '12.2024 – 02.2025',
         icon: '⚡',
         bullets: [
-          'Designed and shipped a real-time notification system serving 2M+ users with sub-50ms delivery via WebSockets and Redis pub/sub.',
-          'Built a data aggregation pipeline that replaced 12 manual reporting scripts, reducing analyst query time by 90%.',
-          'Owned backend for a public-facing API used by 80+ enterprise clients; maintained 99.95% uptime over 3 years.',
+          'Designed and implemented a scalable microservices architecture with NestJS, TypeScript, and PostgreSQL, enhancing system efficiency and maintainability.',
+          'Optimized GCP cloud infrastructure, improving deployment speed, scalability, and cost efficiency.',
+          'Established SDLC best practices and mentored the tech team, ensuring long-term development continuity and accelerating product execution.',
         ],
         tags: [
           'Node.js',
@@ -92,9 +92,9 @@ export const experience = [
         period: '03.2023 – 02.2024',
         icon: '⚡',
         bullets: [
-          'Designed and shipped a real-time notification system serving 2M+ users with sub-50ms delivery via WebSockets and Redis pub/sub.',
-          'Built a data aggregation pipeline that replaced 12 manual reporting scripts, reducing analyst query time by 90%.',
-          'Owned backend for a public-facing API used by 80+ enterprise clients; maintained 99.95% uptime over 3 years.',
+          'Executed large-scale software projects across fintech, EV infrastructure, AI-driven stock investment, and real estate analytics, delivering scalable and high-impact solutions.',
+          'Architected and developed complex platforms, including JARVIS (stock investment) and Cstore IQ (cloud-based retail management), optimizing automation and efficiency.',
+          'Built and deployed mission-critical applications, such as Techpaathshala (student attendance management) and Aditya Birla’s real estate analysis tool, enhancing operational workflows.',
         ],
         tags: [
           'Node.js',

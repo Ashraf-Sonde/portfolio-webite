@@ -52,7 +52,7 @@ export function Hero() {
           {/* Github btn */}
           <Button
             asChild
-            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center"
+            className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center"
           >
             <a
               href={siteConfig.github}
@@ -67,7 +67,7 @@ export function Hero() {
           {/* LinkedIn btn */}
           <Button
             asChild
-            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center bg-[#0d65c3] text-white hover:bg-[#0a54a0]"
+            className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center bg-[#0d65c3] text-white hover:bg-[#0a54a0]"
           >
             <a
               href={siteConfig.linkedin}
@@ -75,7 +75,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="flex items-center justify-center"
             >
-              <span className="mr-1.5 shrink-0">in</span>
+              <span className="mr-1.5 shrink-0 text-base">in</span>
               <span className="truncate">LinkedIn</span>
             </a>
           </Button>
@@ -83,7 +83,7 @@ export function Hero() {
           {/* Contact btn */}
           <Button
             asChild
-            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-amber-500 hover:bg-amber-500/90 text-black"
+            className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-amber-500 hover:bg-amber-500/90 text-black"
           >
             <a href="#contact" className="flex items-center justify-center">
               <Mail className="h-3.5 w-3.5 mr-1.5 shrink-0" />
@@ -94,7 +94,7 @@ export function Hero() {
           {/* Resume btn */}
           <Button
             asChild
-            className="font-mono-tight text-[12px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-neutral-500 hover:bg-neutral-500/90 text-white"
+            className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-neutral-500 hover:bg-neutral-500/90 text-white"
           >
             <a
               href={siteConfig.resume}
