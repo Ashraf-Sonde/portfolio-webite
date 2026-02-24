@@ -62,26 +62,28 @@ export function ProjectCard({
               <div className="text-[14px] font-semibold text-foreground mb-1">
                 {title}
               </div>
-              <div className="font-mono-tight text-[12px] text-pretty text-muted-foreground leading-[1.5]">
+              <div className="text-[12px] text-pretty text-muted-foreground leading-[1.5]">
                 {tagline}
               </div>
             </div>
             <div className="flex items-center gap-[10px] flex-shrink-0 pt-[2px]">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8 text-muted-foreground hover:text-foreground rounded-md"
-                asChild
-              >
-                <a
-                  href={github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
+              {github && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-8 w-8 text-muted-foreground hover:text-foreground rounded-md"
+                  asChild
                 >
-                  <Github className="h-4 w-4" />
-                </a>
-              </Button>
+                  <a
+                    href={github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <Github className="h-4 w-4" />
+                  </a>
+                </Button>
+              )}
               <div className="text-muted-foreground w-4 h-4 flex items-center justify-center">
                 {open ? (
                   <ChevronsDownUp className="h-4 w-4" />
@@ -99,7 +101,7 @@ export function ProjectCard({
               {bullets.map((b, i) => (
                 <li
                   key={i}
-                  className=" text-[12.5px] text-muted-foreground leading-[1.7] pl-[18px] relative mb-[10px] last:mb-0"
+                  className="text-[14px] text-pretty text-foreground leading-[1.7] pl-[18px] relative mb-[10px] last:mb-0"
                 >
                   <span className="absolute left-0 top-0 text-muted-foreground/70">
                     ▸
@@ -122,15 +124,17 @@ export function ProjectCard({
               </Tag>
             ))}
           </div>
-          <Button
-            variant="outline"
-            size="sm"
-            className="font-mono-tight text-[12px] text-muted-foreground hover:text-foreground h-7 px-[10px] rounded-md"
-            onClick={() => onOpenLightbox(title, screenshots)}
-          >
-            <Crop className="h-3 w-3 mr-1.5" />
-            View Screenshots ({screenshots.length})
-          </Button>
+          {screenshots.length > 0 && (
+            <Button
+              variant="outline"
+              size="sm"
+              className="text-[12px] text-muted-foreground hover:text-foreground h-7 px-[10px] rounded-md"
+              onClick={() => onOpenLightbox(title, screenshots)}
+            >
+              <Crop className="h-3 w-3 mr-1.5" />
+              View Screenshots ({screenshots.length})
+            </Button>
+          )}
         </CardFooter>
       </Card>
     </Collapsible>

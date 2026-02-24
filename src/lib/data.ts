@@ -202,27 +202,14 @@ export const projects = [
     icon: '🔁',
     tagline: 'Lightweight distributed task queue built on Redis Streams',
     defaultOpen: true,
-    github: 'https://github.com',
+    github: '',
     bullets: [
       'Handles <strong>50k+ jobs/sec</strong> with at-least-once delivery guarantees and automatic retries.',
       'Built-in dead-letter queue, job inspection dashboard, and CLI for ops teams.',
       'Zero dependencies beyond Redis — drop-in for any Go service in under 10 minutes.',
     ],
     tags: ['Go', 'Redis Streams', 'Open Source', 'CLI'],
-    screenshots: [
-      {
-        src: 'https://placehold.co/820x500/111111/2a2a2a?text=DistroQ+%E2%80%94+Dashboard',
-        caption: 'Queue dashboard overview',
-      },
-      {
-        src: 'https://placehold.co/820x500/111111/2a2a2a?text=DistroQ+%E2%80%94+Job+Detail',
-        caption: 'Job detail & retry view',
-      },
-      {
-        src: 'https://placehold.co/820x500/111111/2a2a2a?text=DistroQ+%E2%80%94+CLI',
-        caption: 'CLI output',
-      },
-    ],
+    screenshots: [],
   },
   {
     id: 'queryflow',
