@@ -58,7 +58,7 @@ export function ProjectCard({
             variant="ghost"
             className="w-full flex items-start justify-between px-5 py-4 pb-[14px] gap-3 text-left h-auto hover:bg-accent/50 rounded-none"
           >
-            <div className="w-9 h-9 rounded-md flex items-center justify-center text-[16px] flex-shrink-0 border border-border bg-background">
+            <div className="w-9 h-9 rounded-md flex items-center justify-center flex-shrink-0 border border-border bg-background">
               <Image
                 src={icon}
                 alt={icon}

@@ -213,82 +213,44 @@ export const projects = [
     screenshots: [],
   },
   {
-    id: 'queryflow',
-    title: 'Queryflow',
-    icon: '📊',
-    tagline: 'Self-hosted analytics pipeline over Postgres + ClickHouse',
+    id: 'coralreef',
+    title: 'Coral Reef (VS Code Theme)',
+    icon: '/assets/projects/logos/coralreeftheme.png',
+    tagline: 'Carefully crafted Visual Studio Code theme designed for developers',
     defaultOpen: false,
-    github: 'https://github.com',
+    github: 'https://github.com/Ashraf-Sonde/coral_reef_vscode_theme',
+    website: 'https://marketplace.visualstudio.com/items?itemName=TheOrangeCat.coral-reef-dark-theme',
     bullets: [
-      'Replaces ad-hoc SQL dashboards with a structured query layer and reusable metric definitions.',
-      'Reduced report generation from <strong>12s to under 300ms</strong> via materialized views and incremental aggregation.',
-      'Ships with a Next.js dashboard UI — self-hostable with a single Docker command.',
+      'Comfortable dark interface with calm teal and coral accents.',
+      'Balances readable code colors with subtle UI highlights to reduce eye strain during long coding sessions.',
+      'Distinct token colors for keywords, strings, functions, and variables.',
     ],
-    tags: ['TypeScript', 'PostgreSQL', 'ClickHouse', 'Next.js'],
+    tags: ['VS Code','Dark Theme', 'UI/UX', 'JSON'],
     screenshots: [
       {
         src: 'https://placehold.co/820x500/111111/2a2a2a?text=Queryflow+%E2%80%94+Overview',
-        caption: 'Analytics overview',
-      },
-      {
-        src: 'https://placehold.co/820x500/111111/2a2a2a?text=Queryflow+%E2%80%94+Query+Builder',
-        caption: 'Query builder UI',
-      },
-      {
-        src: 'https://placehold.co/820x500/111111/2a2a2a?text=Queryflow+%E2%80%94+Charts',
-        caption: 'Chart visualizations',
-      },
-      {
-        src: 'https://placehold.co/820x500/111111/2a2a2a?text=Queryflow+%E2%80%94+Settings',
-        caption: 'Pipeline settings',
+        caption: 'Coral Reef Dark Theme',
       },
     ],
   },
   {
-    id: 'vaultkey',
-    title: 'VaultKey',
-    icon: '🔐',
-    tagline: 'Minimal secrets management API for small teams',
+    id: 'ngdashboard',
+    title: 'Angular Dashboard',
+    icon: 'https://dashboard-angularr.netlify.app/favicon.ico',
+    tagline: 'A minimalistic dashboard to manage bookmarks, todo and notes',
     defaultOpen: false,
-    github: 'https://github.com',
+    github: 'https://github.com/Ashraf-Sonde/personal-dashboard-angular',
+    website: 'https://dashboard-angularr.netlify.app/',
     bullets: [
-      'Lightweight alternative to Vault/Doppler — no enterprise overhead, no cloud lock-in.',
-      'AES-256 encryption at rest, full audit log, and env-file export for CI/CD pipelines.',
-      '<strong>Self-hosted in under 5 minutes</strong> via Docker; single binary with no external deps.',
+      'Personal dashboard to manage bookmarks, todo and notes',
+      'Minimalistic design, clean and modern UI/UX',
+      'Offline first, no backend required',
     ],
-    tags: ['Go', 'SQLite', 'Docker', 'AES-256'],
+    tags: ['Angular', 'TypeScript', 'Browser API', 'HTML', 'CSS', 'UI/UX'],
     screenshots: [
       {
         src: 'https://placehold.co/820x500/111111/2a2a2a?text=VaultKey+%E2%80%94+Secrets+List',
-        caption: 'Secrets list view',
-      },
-      {
-        src: 'https://placehold.co/820x500/111111/2a2a2a?text=VaultKey+%E2%80%94+Audit+Log',
-        caption: 'Audit log',
-      },
-    ],
-  },
-  {
-    id: 'edgecache',
-    title: 'EdgeCache',
-    icon: '⚡',
-    tagline: 'CDN-aware HTTP cache middleware for Node.js',
-    defaultOpen: false,
-    github: 'https://github.com',
-    bullets: [
-      'Drop-in Express/Fastify middleware that sets Cache-Control headers automatically based on route patterns.',
-      'Cut origin server load by <strong>~60%</strong> in production by maximising CDN hit rates without config sprawl.',
-      'Published to npm — 1.2k weekly downloads, zero peer dependencies.',
-    ],
-    tags: ['Node.js', 'TypeScript', 'NPM Package', 'HTTP'],
-    screenshots: [
-      {
-        src: 'https://placehold.co/820x500/111111/2a2a2a?text=EdgeCache+%E2%80%94+Middleware',
-        caption: 'Middleware config example',
-      },
-      {
-        src: 'https://placehold.co/820x500/111111/2a2a2a?text=EdgeCache+%E2%80%94+Benchmark',
-        caption: 'Benchmark results',
+        caption: 'Bookmarks view',
       },
     ],
   },
@@ -313,11 +275,11 @@ export const skills = [
   },
   {
     label: 'Cloud / Infra',
-    tags: ['AWS', 'GCP', 'Docker', 'RabbitMQ', 'NGINX', 'Apache2', 'PM2'],
+    tags: ['AWS', 'GCP', 'Docker', 'RabbitMQ', 'Nginx', 'Apache2', 'PM2'],
   },
   {
     label: 'Frontend',
-    tags: ['React', 'Next.js', 'TypeScript', 'Tailwind'],
+    tags: ['React', 'Next.js', 'TypeScript', 'Angular', 'Tailwind', 'Material UI', 'Shadcn/UI'],
   },
 ];
 
