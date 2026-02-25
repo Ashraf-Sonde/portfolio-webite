@@ -1,6 +1,19 @@
 import type { Metadata } from 'next';
+import { Inter, Inter_Tight } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/lib/data';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+});
+
+const interTight = Inter_Tight({
+  subsets: ['latin'],
+  variable: '--font-mono',
+  display: 'swap',
+});
 
 const siteUrl = `https://${siteConfig.domain}`;
 
@@ -63,8 +76,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
-      <body>
+    <html lang="en" className={`dark ${inter.variable} ${interTight.variable}`} suppressHydrationWarning>
+      <body className={inter.className}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
