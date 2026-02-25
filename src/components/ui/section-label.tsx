@@ -8,15 +8,15 @@ interface SectionLabelProps {
 
 export function SectionLabel({ children, className }: SectionLabelProps) {
   return (
-    <div
+    <h2
       className={cn(
         'section-label font-mono-tight text-[12px] uppercase tracking-[0.12em]',
-        'text-[var(--text-dim)] mb-8 flex items-center gap-[10px]',
+        'text-[var(--text-dim)] mb-8 flex items-center gap-[10px] font-normal',
         className
       )}
     >
       {children}
       <Separator className="flex-1" />
-    </div>
+    </h2>
   );
 }
