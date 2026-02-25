@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronsUpDown, ChevronsDownUp, Github, Crop } from 'lucide-react';
+import { ChevronsUpDown, ChevronsDownUp, Github, Crop, Link } from 'lucide-react';
 import { Tag } from './tag';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import {
@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/collapsible';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 export interface Screenshot {
   src: string;
@@ -23,6 +24,7 @@ interface ProjectCardProps {
   tagline: string;
   defaultOpen?: boolean;
   github: string;
+  website?: string;
   bullets: string[];
   tags: string[];
   screenshots: Screenshot[];
@@ -35,6 +37,7 @@ export function ProjectCard({
   tagline,
   defaultOpen = false,
   github,
+  website,
   bullets,
   tags,
   screenshots,
@@ -56,7 +59,13 @@ export function ProjectCard({
             className="w-full flex items-start justify-between px-5 py-4 pb-[14px] gap-3 text-left h-auto hover:bg-accent/50 rounded-none"
           >
             <div className="w-9 h-9 rounded-md flex items-center justify-center text-[16px] flex-shrink-0 border border-border bg-background">
-              {icon}
+              <Image
+                src={icon}
+                alt={icon}
+                width={24}
+                height={24}
+                className="object-contain p-1"
+              />
             </div>
             <div className="flex-1 min-w-0">
               <div className="text-[14px] font-semibold text-foreground mb-1">
@@ -66,7 +75,24 @@ export function ProjectCard({
                 {tagline}
               </div>
             </div>
-            <div className="flex items-center gap-[10px] flex-shrink-0 pt-[2px]">
+            <div className="flex items-center gap-[6px] flex-shrink-0 pt-[2px]">
+            {website && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-8 w-8 text-muted-foreground hover:text-foreground rounded-md"
+                  asChild
+                >
+                  <a
+                    href={website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <Link className="h-4 w-4" />
+                  </a>
+                </Button>
+              )}
               {github && (
                 <Button
                   variant="ghost"

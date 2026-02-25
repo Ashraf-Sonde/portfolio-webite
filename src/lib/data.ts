@@ -3,7 +3,7 @@ export const siteConfig = {
   initials: 'AS',
   domain: 'ashrafsonde.me',
   title: 'Senior Software Engineer',
-  tagline: 'Building scalable backend systems & distributed infrastructure',
+  tagline: 'Building solutions that matter.',
   description:
     'Senior Software Engineer specializing in scalable distributed systems, backend architecture, and platform reliability.',
   status: 'Open to backend & platform roles',
@@ -22,7 +22,7 @@ export const aboutStats = [
 export const experience = [
   {
     company: 'Cloudesign Technology Pvt Ltd',
-    icon: '/assets/logos/cloudesign.png',
+    icon: '/assets/experience/logos/cloudesign.png',
     active: true,
     roles: [
       {
@@ -53,7 +53,7 @@ export const experience = [
   },
   {
     company: 'Karma AI',
-    icon: '/assets/logos/karma.png',
+    icon: '/assets/experience/logos/karma.png',
     active: false,
     roles: [
       {
@@ -83,7 +83,7 @@ export const experience = [
   },
   {
     company: 'Techstalwarts',
-    icon: '/assets/logos/techstalwarts.png',
+    icon: '/assets/experience/logos/techstalwarts.png',
     active: false,
     roles: [
       {
@@ -134,7 +134,7 @@ export const experience = [
   },
   {
     company: 'Techpaathshala',
-    icon: '/assets/logos/techpaathshala.png',
+    icon: '/assets/experience/logos/techpaathshala.png',
     active: false,
     roles: [
       {
@@ -163,7 +163,7 @@ export const experience = [
   },
   {
     company: 'DzineBee',
-    icon: '/assets/logos/dzinebee.png',
+    icon: '/assets/experience/logos/dzinebee.png',
     active: false,
     roles: [
       {
@@ -197,18 +197,19 @@ export const experience = [
 
 export const projects = [
   {
-    id: 'distroq',
-    title: 'DistroQ',
-    icon: '🔁',
-    tagline: 'Lightweight distributed task queue built on Redis Streams',
+    id: 'bemymunshi',
+    title: 'BeMyMunshi',
+    icon: '/assets/projects/logos/bemymunshi.png',
+    tagline: 'A fully offline, privacy-first personal finance manager — right in your browser.',
     defaultOpen: true,
-    github: '',
+    github: 'http://github.com/Ashraf-Sonde/bemymunshi',
+    website: 'https://bemymunshi.com',
     bullets: [
-      'Handles <strong>50k+ jobs/sec</strong> with at-least-once delivery guarantees and automatic retries.',
-      'Built-in dead-letter queue, job inspection dashboard, and CLI for ops teams.',
-      'Zero dependencies beyond Redis — drop-in for any Go service in under 10 minutes.',
+      'Built for people who value their privacy and want complete control over their finances.',
+      'A complete personal finance toolkit, designed for simplicity and power.',
+      'Generate beautiful PDF reports of your financial analytics',
     ],
-    tags: ['Go', 'Redis Streams', 'Open Source', 'CLI'],
+    tags: ['Next.js', 'TypeScript', 'Tailwind', 'Shadcn/UI', 'Browser API'],
     screenshots: [],
   },
   {

@@ -31,6 +31,7 @@ export function Projects() {
               tagline={project.tagline}
               defaultOpen={projectIndex === 0}
               github={project.github}
+              website={project.website}
               bullets={project.bullets}
               tags={project.tags}
               screenshots={project.screenshots}
