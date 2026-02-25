@@ -202,7 +202,7 @@ export const projects = [
     icon: '/assets/projects/logos/bemymunshi.png',
     tagline: 'A fully offline, privacy-first personal finance manager — right in your browser.',
     defaultOpen: true,
-    github: 'http://github.com/Ashraf-Sonde/bemymunshi',
+    github: '',
     website: 'https://bemymunshi.com',
     bullets: [
       'Built for people who value their privacy and want complete control over their finances.',
