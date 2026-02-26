@@ -88,8 +88,9 @@ export function ProjectCard({
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
+                    aria-label="Visit website"
                   >
-                    <Link className="h-4 w-4" />
+                    <Link className="h-4 w-4" aria-hidden="true" />
                   </a>
                 </Button>
               )}
@@ -105,8 +106,9 @@ export function ProjectCard({
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
+                    aria-label="Visit GitHub repository"
                   >
-                    <Github className="h-4 w-4" />
+                    <Github className="h-4 w-4" aria-hidden="true" />
                   </a>
                 </Button>
               )}
