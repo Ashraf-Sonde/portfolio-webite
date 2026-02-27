@@ -1,7 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronsUpDown, ChevronsDownUp, Github, Crop, Link } from 'lucide-react';
+import {
+  ChevronsUpDown,
+  ChevronsDownUp,
+  Github,
+  Crop,
+  Link,
+} from 'lucide-react';
 import { Tag } from './tag';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import {
@@ -76,7 +82,7 @@ export function ProjectCard({
               </div>
             </div>
             <div className="flex items-center gap-[6px] flex-shrink-0 pt-[2px]">
-            {website && (
+              {website && (
                 <Button
                   variant="ghost"
                   size="icon"

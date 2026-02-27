@@ -39,7 +39,9 @@ export const metadata: Metadata = {
     type: 'website',
     url: siteUrl,
     siteName: siteConfig.name,
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: siteConfig.name }],
+    images: [
+      { url: '/og.png', width: 1200, height: 630, alt: siteConfig.name },
+    ],
   },
   icons: {
     icon: '/favicon.ico',
@@ -76,7 +78,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`dark ${inter.variable} ${interTight.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`dark ${inter.variable} ${interTight.variable}`}
+      suppressHydrationWarning
+    >
       <body className={inter.className}>
         <script
           type="application/ld+json"

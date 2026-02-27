@@ -89,7 +89,10 @@
       var(--pattern-line) 10px
     );
     color: var(--text);
-    font-family: var(--font-sans), -apple-system, sans-serif;
+    font-family:
+      var(--font-sans),
+      -apple-system,
+      sans-serif;
     font-size: 15px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;

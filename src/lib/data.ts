@@ -200,7 +200,8 @@ export const projects = [
     id: 'bemymunshi',
     title: 'BeMyMunshi',
     icon: '/assets/projects/logos/bemymunshi.png',
-    tagline: 'A fully offline, privacy-first personal finance manager — right in your browser.',
+    tagline:
+      'A fully offline, privacy-first personal finance manager — right in your browser.',
     defaultOpen: true,
     github: '',
     website: 'https://bemymunshi.com',
@@ -216,16 +217,18 @@ export const projects = [
     id: 'coralreef',
     title: 'Coral Reef (VS Code Theme)',
     icon: '/assets/projects/logos/coralreeftheme.png',
-    tagline: 'Carefully crafted Visual Studio Code theme designed for developers',
+    tagline:
+      'Carefully crafted Visual Studio Code theme designed for developers',
     defaultOpen: false,
     github: 'https://github.com/Ashraf-Sonde/coral_reef_vscode_theme',
-    website: 'https://marketplace.visualstudio.com/items?itemName=TheOrangeCat.coral-reef-dark-theme',
+    website:
+      'https://marketplace.visualstudio.com/items?itemName=TheOrangeCat.coral-reef-dark-theme',
     bullets: [
       'Comfortable dark interface with calm teal and coral accents.',
       'Balances readable code colors with subtle UI highlights to reduce eye strain during long coding sessions.',
       'Distinct token colors for keywords, strings, functions, and variables.',
     ],
-    tags: ['VS Code','Dark Theme', 'UI/UX', 'JSON'],
+    tags: ['VS Code', 'Dark Theme', 'UI/UX', 'JSON'],
     screenshots: [
       {
         src: 'https://placehold.co/820x500/111111/2a2a2a?text=Queryflow+%E2%80%94+Overview',
@@ -279,7 +282,15 @@ export const skills = [
   },
   {
     label: 'Frontend',
-    tags: ['React', 'Next.js', 'TypeScript', 'Angular', 'Tailwind', 'Material UI', 'Shadcn/UI'],
+    tags: [
+      'React',
+      'Next.js',
+      'TypeScript',
+      'Angular',
+      'Tailwind',
+      'Material UI',
+      'Shadcn/UI',
+    ],
   },
 ];
 
