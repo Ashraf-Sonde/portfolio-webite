@@ -40,17 +40,30 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: siteConfig.name,
     images: [
-      { url: '/og.png', width: 1200, height: 630, alt: siteConfig.name },
+      { url: '/assets/og.png', width: 1200, height: 630, alt: siteConfig.name },
     ],
   },
   icons: {
-    icon: '/assets/favicon.ico',
+    icon: [
+      { url: '/assets/favicon.ico', type: 'image/x-icon' },
+      {
+        url: '/assets/android-chrome-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        url: '/assets/android-chrome-512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
+      },
+    ],
+    apple: '/assets/apple-touch-icon.png',
   },
   robots: {
     index: true,
     follow: true,
   },
-  manifest: '/manifest.json',
+  manifest: '/assets/manifest.json',
   category: 'technology',
   creator: siteConfig.name,
   publisher: siteConfig.name,
