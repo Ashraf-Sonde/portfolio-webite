@@ -1,10 +1,30 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import { siteConfig } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Github, Download, Mail, Linkedin } from 'lucide-react';
+import { Github, Download, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
+const TAGLINE_INTERVAL_MS = 3000;
+
+const taglines = Array.isArray(siteConfig.tagline)
+  ? siteConfig.tagline
+  : [siteConfig.tagline];
+
 export function Hero() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Rotate tagline every 3 seconds
+  useEffect(() => {
+    if (taglines.length <= 1) return;
+    const id = setInterval(() => {
+      setCurrentIndex((i) => (i + 1) % taglines.length);
+    }, TAGLINE_INTERVAL_MS);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section id="hero" className="py-[60px]">
       <div className="max-w-content mx-auto px-6">
@@ -22,7 +42,7 @@ export function Hero() {
         </div>
 
         <h1
-          className="fade-up fade-up-2 font-semibold tracking-[-0.03em] leading-[1.1] mb-1 text-foreground"
+          className="fade-up fade-up-2 font-semibold tracking-[-0.03em] leading-[1.1] text-foreground"
           style={{ fontSize: 'clamp(36px, 6vw, 56px)' }}
         >
           {siteConfig.name.split(' ')[0]}{' '}
@@ -31,8 +51,16 @@ export function Hero() {
           </span>
         </h1>
 
-        <div className="fade-up fade-up-2 text-base text-balance text-[--dot-active] mb-6 leading-[1.5]">
-          {siteConfig.tagline}
+        <div
+          className="h-12.5 flex items-center text-base text-balance text-[--dot-active] mb-8 leading-[1.5]"
+        >
+          <span
+            key={currentIndex}
+            className="tagline-rotate-in block truncate"
+            title={taglines[currentIndex]}
+          >
+            {taglines[currentIndex]}
+          </span>
         </div>
 
         <p className="fade-up fade-up-3 text-base text-justify text-muted-foreground max-w-[100%] leading-[1.5] mb-9">
