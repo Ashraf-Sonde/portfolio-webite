@@ -3,7 +3,9 @@ import { SectionLabel } from '@/components/ui/section-label';
 import { ExperienceCard } from '@/components/ui/experience-card';
 import { Card } from '@/components/ui/card';
 import Image from 'next/image';
+import { getIcon } from '@/lib/utils';
 
+// Experience section component
 export function Experience() {
   return (
     <section id="experience" className="py-[60px]">
@@ -40,7 +42,7 @@ export function Experience() {
               {company.roles.map((role, roleIndex) => (
                 <ExperienceCard
                   key={role.title}
-                  icon={role.icon}
+                  icon={getIcon(role.icon)}
                   title={role.title}
                   meta={`${role.type} · ${role.period}`}
                   defaultOpen={companyIndex === 0 && roleIndex === 0}

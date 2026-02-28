@@ -12,7 +12,7 @@ import {
 import { Button } from '@/components/ui/button';
 
 interface AccordionCardProps {
-  icon: string;
+  icon: React.ReactNode;
   title: string;
   meta: string;
   defaultOpen?: boolean;
@@ -38,7 +38,7 @@ export function ExperienceCard({
             variant="ghost"
             className="w-full flex items-start justify-between px-5 py-4 gap-3 text-left h-auto hover:bg-accent/50 rounded-none"
           >
-            <div className="w-[30px] h-[30px] rounded-md flex items-center justify-center text-[13px] flex-shrink-0 mt-[1px] border border-border bg-background">
+            <div className="w-8 h-8 flex size-6 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground border border-muted-foreground/15">
               {icon}
             </div>
             <div className="flex-1 min-w-0">

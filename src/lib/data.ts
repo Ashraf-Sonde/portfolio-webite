@@ -29,7 +29,7 @@ export const experience = [
         title: 'Software Engineer II',
         type: 'Full-time',
         period: '03.2024 – Present',
-        icon: '⚙️',
+        icon: 'DraftingCompass',
         bullets: [
           'Rearchitected the core payments pipeline from a monolith to event-driven microservices, reducing p99 latency from 1.8s to 210ms under peak load.',
           'Led system design for a multi-region failover setup that brought downtime from ~4 hours/year to under 12 minutes.',
@@ -60,7 +60,7 @@ export const experience = [
         title: 'Senior Software Engineer',
         type: 'Contract role',
         period: '12.2024 – 02.2025',
-        icon: '⚡',
+        icon: 'DraftingCompass',
         bullets: [
           'Designed and implemented a scalable microservices architecture with NestJS, TypeScript, and PostgreSQL, enhancing system efficiency and maintainability.',
           'Optimized GCP cloud infrastructure, improving deployment speed, scalability, and cost efficiency.',
@@ -90,7 +90,7 @@ export const experience = [
         title: 'Software Engineer',
         type: 'Full-time',
         period: '03.2023 – 02.2024',
-        icon: '⚡',
+        icon: 'CodeXml',
         bullets: [
           'Executed large-scale software projects across fintech, EV infrastructure, AI-driven stock investment, and real estate analytics, delivering scalable and high-impact solutions.',
           'Architected and developed complex platforms, including JARVIS (stock investment) and Cstore IQ (cloud-based retail management), optimizing automation and efficiency.',
@@ -112,7 +112,7 @@ export const experience = [
         title: 'Associate Software Engineer',
         type: 'Full-time',
         period: '04.2022 – 03.2023',
-        icon: '⚡',
+        icon: 'CodeXml',
         bullets: [
           'Designed and shipped a real-time notification system serving 2M+ users with sub-50ms delivery via WebSockets and Redis pub/sub.',
           'Built a data aggregation pipeline that replaced 12 manual reporting scripts, reducing analyst query time by 90%.',
@@ -141,7 +141,7 @@ export const experience = [
         title: 'Technical Consultant',
         type: 'Part-time',
         period: '06.2023 – 12.2023',
-        icon: '⚡',
+        icon: 'GraduationCap',
         bullets: [
           'Mentored students in React and Node.js, enhancing their technical proficiency and confidence through personalized guidance.',
           'Conducted hands-on sessions on JavaScript fundamentals and problem-solving, fostering critical thinking and full-stack development expertise.',
@@ -170,7 +170,7 @@ export const experience = [
         title: 'Junior Software Engineer',
         type: 'Full-time',
         period: '04.2021 – 04.2022',
-        icon: '⚡',
+        icon: 'CodeXml',
         bullets: [
           'Developed and deployed scalable e-commerce platforms, driving a 34% increase in client store sales through optimized web solutions.',
           'Designed and implemented high-performance web applications using WordPress, WooCommerce, PHP, JavaScript, SCSS, and Docker, ensuring seamless functionality.',
