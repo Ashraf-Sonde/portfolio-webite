@@ -135,7 +135,7 @@ export function ProjectCard({
               {bullets.map((b, i) => (
                 <li
                   key={i}
-                  className="text-[14px] text-pretty text-foreground leading-[1.7] pl-[18px] relative mb-[10px] last:mb-0"
+                  className="text-[14px] text-justify text-foreground leading-[1.7] pl-[18px] relative mb-[10px] last:mb-0"
                 >
                   <span className="absolute left-0 top-0 text-muted-foreground/70">
                     ▸

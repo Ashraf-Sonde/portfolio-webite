@@ -26,7 +26,7 @@ export function Contact() {
             <h3 className="text-[20px] font-semibold tracking-[-0.02em] mb-[10px] text-foreground">
               Let&apos;s work together
             </h3>
-            <p className="text-[14px] text-muted-foreground mb-6">
+            <p className="text-[14px] text-justify text-muted-foreground mb-6">
               Open to senior/staff backend roles, platform engineering, and
               founding engineer opportunities. Remote-first. Drop me a line.
             </p>

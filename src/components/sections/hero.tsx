@@ -22,7 +22,7 @@ export function Hero() {
         </div>
 
         <h1
-          className="fade-up fade-up-2 font-semibold tracking-[-0.03em] leading-[1.1] mb-5 text-foreground"
+          className="fade-up fade-up-2 font-semibold tracking-[-0.03em] leading-[1.1] mb-1 text-foreground"
           style={{ fontSize: 'clamp(36px, 6vw, 56px)' }}
         >
           {siteConfig.name.split(' ')[0]}{' '}
@@ -35,7 +35,7 @@ export function Hero() {
           {siteConfig.tagline}
         </div>
 
-        <p className="fade-up fade-up-3 text-base text-pretty text-muted-foreground max-w-[100%] leading-[1.5] mb-9">
+        <p className="fade-up fade-up-3 text-base text-justify text-muted-foreground max-w-[100%] leading-[1.5] mb-9">
           I design systems that handle{' '}
           <strong className="text-foreground font-medium">
             millions of requests

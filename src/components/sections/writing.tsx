@@ -12,7 +12,7 @@ export function Writing() {
         <Card className="border border-dashed border-border rounded-lg shadow-none">
           <CardContent className="p-9 text-center">
             <div className=" text-[12px] text-muted-foreground/80 mb-2">
-              // coming soon
+              // Coming Soon
             </div>
             <p className="text-[14px] text-muted-foreground max-w-[380px] mx-auto mb-5 leading-[1.6]">
               Writing about distributed systems, backend architecture, and
