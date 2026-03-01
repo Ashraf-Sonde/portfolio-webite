@@ -59,7 +59,7 @@ export const experience = [
       {
         title: 'Senior Software Engineer',
         type: 'Contract',
-        period: '12.2024 – 02.2025',
+        period: '03.2024 – 02.2025',
         icon: 'DraftingCompass',
         bullets: [
           'Designed and implemented a scalable microservices architecture with NestJS, TypeScript, and PostgreSQL, enhancing system efficiency and maintainability.',
