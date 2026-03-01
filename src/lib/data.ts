@@ -231,8 +231,12 @@ export const projects = [
     tags: ['VS Code', 'Dark Theme', 'UI/UX', 'JSON'],
     screenshots: [
       {
-        src: 'https://placehold.co/820x500/111111/2a2a2a?text=Queryflow+%E2%80%94+Overview',
+        src: 'https://picsum.photos/id/48/400/300',
         caption: 'Coral Reef Dark Theme',
+      },
+      {
+        src: 'https://picsum.photos/id/1/400/300',
+        caption: 'Coral Reef Dark Theme 2',
       },
     ],
   },
@@ -252,8 +256,16 @@ export const projects = [
     tags: ['Angular', 'TypeScript', 'Browser API', 'HTML', 'CSS', 'UI/UX'],
     screenshots: [
       {
-        src: 'https://placehold.co/820x500/111111/2a2a2a?text=VaultKey+%E2%80%94+Secrets+List',
+        src: 'https://picsum.photos/id/20/400/300',
         caption: 'Bookmarks view',
+      },
+      {
+        src: 'https://picsum.photos/id/8/400/300',
+        caption: 'Notes view',
+      },
+      {
+        src: 'https://picsum.photos/id/2/400/300',
+        caption: 'Todo view',
       },
     ],
   },
