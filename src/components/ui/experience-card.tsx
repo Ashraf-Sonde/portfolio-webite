@@ -74,8 +74,8 @@ export function ExperienceCard({
               ))}
             </ul>
             <div className="flex flex-wrap gap-[6px] mt-3">
-              {tags.map((t) => (
-                <Tag className="py-1 px-2" key={t}>
+              {tags.map((t, i) => (
+                <Tag className="py-1 px-2" key={`${t}-${i}`}>
                   {t}
                 </Tag>
               ))}

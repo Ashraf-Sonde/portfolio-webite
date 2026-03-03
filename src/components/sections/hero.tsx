@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Github, Download, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import posthog from 'posthog-js';
 
 const TAGLINE_INTERVAL_MS = 3000;
 
@@ -51,9 +52,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <div
-          className="h-12.5 flex items-center text-base text-balance text-[--dot-active] mb-8 leading-[1.5]"
-        >
+        <div className="h-12.5 flex items-center text-base text-balance text-[--dot-active] mb-8 leading-[1.5]">
           <span
             key={currentIndex}
             className="tagline-rotate-in block truncate"
@@ -86,6 +85,9 @@ export function Hero() {
               href={siteConfig.github}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                posthog.capture('hero_cta_clicked', { cta: 'github' })
+              }
             >
               <Github className="h-3.5 w-3.5 mr-1.5 shrink-0" />
               <span className="truncate">GitHub</span>
@@ -102,6 +104,9 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center"
+              onClick={() =>
+                posthog.capture('hero_cta_clicked', { cta: 'linkedin' })
+              }
             >
               <span className="mr-1.5 shrink-0 text-base">in</span>
               <span className="truncate">LinkedIn</span>
@@ -113,7 +118,13 @@ export function Hero() {
             asChild
             className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-amber-500 hover:bg-amber-500/90 text-black"
           >
-            <a href="#contact" className="flex items-center justify-center">
+            <a
+              href="#contact"
+              className="flex items-center justify-center"
+              onClick={() =>
+                posthog.capture('hero_cta_clicked', { cta: 'contact' })
+              }
+            >
               <Mail className="h-3.5 w-3.5 mr-1.5 shrink-0" />
               <span className="truncate">Contact</span>
             </a>
@@ -127,6 +138,9 @@ export function Hero() {
             <a
               href={siteConfig.resume}
               className="flex items-center justify-center"
+              onClick={() =>
+                posthog.capture('hero_cta_clicked', { cta: 'resume' })
+              }
             >
               <Download className="h-3.5 w-3.5 mr-1.5 shrink-0" />
               <span className="truncate">Resume</span>

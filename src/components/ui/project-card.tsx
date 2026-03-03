@@ -18,6 +18,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import posthog from 'posthog-js';
 
 export interface Screenshot {
   src: string;
@@ -51,8 +52,15 @@ export function ProjectCard({
 }: ProjectCardProps) {
   const [open, setOpen] = useState(defaultOpen);
 
+  function handleOpenChange(next: boolean) {
+    setOpen(next);
+    if (next) {
+      posthog.capture('project_expanded', { project_title: title });
+    }
+  }
+
   return (
-    <Collapsible open={open} onOpenChange={setOpen}>
+    <Collapsible open={open} onOpenChange={handleOpenChange}>
       <Card
         className={cn(
           'rounded-lg border-border bg-card overflow-hidden transition-colors shadow-none',
@@ -93,7 +101,13 @@ export function ProjectCard({
                     href={website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      posthog.capture('project_website_clicked', {
+                        project_title: title,
+                        url: website,
+                      });
+                    }}
                     aria-label="Visit website"
                   >
                     <Link className="h-4 w-4" aria-hidden="true" />
@@ -111,7 +125,13 @@ export function ProjectCard({
                     href={github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      posthog.capture('project_github_clicked', {
+                        project_title: title,
+                        url: github,
+                      });
+                    }}
                     aria-label="View onGitHub"
                   >
                     <Github className="h-4 w-4" aria-hidden="true" />
@@ -163,7 +183,13 @@ export function ProjectCard({
               variant="outline"
               size="sm"
               className="text-[12px] text-muted-foreground hover:text-foreground h-7 px-[10px] rounded-md"
-              onClick={() => onOpenLightbox(title, screenshots)}
+              onClick={() => {
+                onOpenLightbox(title, screenshots);
+                posthog.capture('project_screenshots_viewed', {
+                  project_title: title,
+                  screenshot_count: screenshots.length,
+                });
+              }}
             >
               <Crop className="h-3 w-3 mr-1.5" />
               View Screenshots ({screenshots.length})

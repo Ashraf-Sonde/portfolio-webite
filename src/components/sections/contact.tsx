@@ -1,3 +1,5 @@
+'use client';
+
 import { siteConfig } from '@/lib/data';
 import { getEmail } from '@/lib/utils';
 import { SectionLabel } from '@/components/ui/section-label';
@@ -5,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Github, Mail } from 'lucide-react';
+import posthog from 'posthog-js';
 
 function urlDisplay(url: string): string {
   try {
@@ -36,7 +39,14 @@ export function Contact() {
                 asChild
                 className="justify-start h-auto py-2 px-3 font-mono-tight text-[13px] bg-card bg-amber-500 hover:bg-amber-500/90 text-black"
               >
-                <a href={`mailto:${getEmail()}`}>
+                <a
+                  href={`mailto:${getEmail()}`}
+                  onClick={() =>
+                    posthog.capture('contact_email_clicked', {
+                      email: getEmail(),
+                    })
+                  }
+                >
                   <span className="text-[15px] mr-2">
                     <Mail />
                   </span>
@@ -51,6 +61,12 @@ export function Contact() {
                   href={siteConfig.github}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() =>
+                    posthog.capture('contact_social_clicked', {
+                      platform: 'github',
+                      url: siteConfig.github,
+                    })
+                  }
                 >
                   <Github className="h-3.5 w-3.5 mr-1.5 shrink-0" />
                   <span className="truncate">
@@ -66,6 +82,12 @@ export function Contact() {
                   href={siteConfig.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() =>
+                    posthog.capture('contact_social_clicked', {
+                      platform: 'linkedin',
+                      url: siteConfig.linkedin,
+                    })
+                  }
                 >
                   <span className="text-[15px] mr-2">in</span>
                   {urlDisplay(siteConfig.linkedin)}
@@ -80,6 +102,7 @@ export function Contact() {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             className="flex flex-col gap-[10px]"
+            onSubmit={() => posthog.capture('contact_form_submitted')}
           >
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />

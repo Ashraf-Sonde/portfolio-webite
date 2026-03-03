@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { siteConfig } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import posthog from 'posthog-js';
 
 export function Nav() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
@@ -19,6 +20,7 @@ export function Nav() {
     setTheme(next);
     document.documentElement.className = next;
     localStorage.setItem('theme', next);
+    posthog.capture('theme_toggled', { theme: next });
   }
 
   function scrollTo(id: string) {
@@ -54,7 +56,10 @@ export function Nav() {
           <Button
             variant="ghost"
             size="sm"
-            onClick={() => scrollTo('#about')}
+            onClick={() => {
+              scrollTo('#about');
+              posthog.capture('nav_section_clicked', { section: 'about' });
+            }}
             className="hidden sm:flex text-[13px] text-muted-foreground hover:text-foreground h-8 px-[10px] rounded-md"
           >
             About
@@ -62,7 +67,10 @@ export function Nav() {
           <Button
             variant="ghost"
             size="sm"
-            onClick={() => scrollTo('#experience')}
+            onClick={() => {
+              scrollTo('#experience');
+              posthog.capture('nav_section_clicked', { section: 'experience' });
+            }}
             className="hidden sm:flex text-[13px] text-muted-foreground hover:text-foreground h-8 px-[10px] rounded-md"
           >
             Work
@@ -70,7 +78,10 @@ export function Nav() {
           <Button
             variant="ghost"
             size="sm"
-            onClick={() => scrollTo('#projects')}
+            onClick={() => {
+              scrollTo('#projects');
+              posthog.capture('nav_section_clicked', { section: 'projects' });
+            }}
             className="hidden sm:flex text-[13px] text-muted-foreground hover:text-foreground h-8 px-[10px] rounded-md"
           >
             Projects
@@ -78,7 +89,10 @@ export function Nav() {
           <Button
             variant="ghost"
             size="sm"
-            onClick={() => scrollTo('#contact')}
+            onClick={() => {
+              scrollTo('#contact');
+              posthog.capture('nav_section_clicked', { section: 'contact' });
+            }}
             className="hidden sm:flex text-[13px] text-muted-foreground hover:text-foreground h-8 px-[10px] rounded-md"
           >
             Contact
