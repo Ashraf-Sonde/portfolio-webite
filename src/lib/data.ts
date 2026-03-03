@@ -3,7 +3,11 @@ export const siteConfig = {
   initials: 'AS',
   domain: 'ashrafsonde.me',
   title: 'Senior Software Engineer',
-  tagline: ['Software Engineer','Building solutions that matter', 'Designing reliable systems'],
+  tagline: [
+    'Software Engineer',
+    'Building solutions that matter',
+    'Designing reliable systems',
+  ],
   description:
     'Senior Software Engineer specializing in scalable distributed systems, backend architecture, and platform reliability.',
   status: 'Open to backend & platform roles',

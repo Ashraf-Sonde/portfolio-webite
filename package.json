@@ -6,7 +6,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "dev": "next dev",
-    "build": "next build",
+    "build": "rm -rf out && next build",
     "start": "next start",
     "lint": "next lint"
   },

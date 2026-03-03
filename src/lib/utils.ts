@@ -8,9 +8,12 @@ import { CodeXml, GraduationCap, DraftingCompass } from 'lucide-react';
 
 // Function to get the icon based on the icon name
 export function getIcon(icon: string): React.ReactNode {
-  if (icon === 'CodeXml') return React.createElement(CodeXml, { className: 'h-4 w-4' });
-  if (icon === 'GraduationCap') return React.createElement(GraduationCap, { className: 'h-4 w-4' });
-  if (icon === 'DraftingCompass') return React.createElement(DraftingCompass, { className: 'h-4 w-4' });
+  if (icon === 'CodeXml')
+    return React.createElement(CodeXml, { className: 'h-4 w-4' });
+  if (icon === 'GraduationCap')
+    return React.createElement(GraduationCap, { className: 'h-4 w-4' });
+  if (icon === 'DraftingCompass')
+    return React.createElement(DraftingCompass, { className: 'h-4 w-4' });
   return icon;
 }
 
