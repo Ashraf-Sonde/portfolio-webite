@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Github, Mail } from 'lucide-react';
-import posthog from 'posthog-js';
+import { trackEvent } from '@/lib/events';
 
 function urlDisplay(url: string): string {
   try {
@@ -42,8 +42,11 @@ export function Contact() {
                 <a
                   href={`mailto:${getEmail()}`}
                   onClick={() =>
-                    posthog.capture('contact_email_clicked', {
-                      email: getEmail(),
+                    trackEvent({
+                      name: 'contact_email_clicked',
+                      properties: {
+                        email: getEmail(),
+                      },
                     })
                   }
                 >
@@ -62,9 +65,12 @@ export function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() =>
-                    posthog.capture('contact_social_clicked', {
-                      platform: 'github',
-                      url: siteConfig.github,
+                    trackEvent({
+                      name: 'contact_social_clicked',
+                      properties: {
+                        platform: 'github',
+                        url: siteConfig.github,
+                      },
                     })
                   }
                 >
@@ -83,9 +89,12 @@ export function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() =>
-                    posthog.capture('contact_social_clicked', {
-                      platform: 'linkedin',
-                      url: siteConfig.linkedin,
+                    trackEvent({
+                      name: 'contact_social_clicked',
+                      properties: {
+                        platform: 'linkedin',
+                        url: siteConfig.linkedin,
+                      },
                     })
                   }
                 >
@@ -102,7 +111,9 @@ export function Contact() {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             className="flex flex-col gap-[10px]"
-            onSubmit={() => posthog.capture('contact_form_submitted')}
+            onSubmit={() =>
+              trackEvent({ name: 'contact_form_submitted', properties: {} })
+            }
           >
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />

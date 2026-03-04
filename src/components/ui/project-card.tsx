@@ -18,7 +18,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import posthog from 'posthog-js';
+import { trackEvent } from '@/lib/events';
 
 export interface Screenshot {
   src: string;
@@ -55,7 +55,10 @@ export function ProjectCard({
   function handleOpenChange(next: boolean) {
     setOpen(next);
     if (next) {
-      posthog.capture('project_expanded', { project_title: title });
+      trackEvent({
+        name: 'project_expanded',
+        properties: { project_title: title },
+      });
     }
   }
 
@@ -103,9 +106,12 @@ export function ProjectCard({
                     rel="noopener noreferrer"
                     onClick={(e) => {
                       e.stopPropagation();
-                      posthog.capture('project_website_clicked', {
-                        project_title: title,
-                        url: website,
+                      trackEvent({
+                        name: 'project_website_clicked',
+                        properties: {
+                          project_title: title,
+                          url: website,
+                        },
                       });
                     }}
                     aria-label="Visit website"
@@ -127,9 +133,12 @@ export function ProjectCard({
                     rel="noopener noreferrer"
                     onClick={(e) => {
                       e.stopPropagation();
-                      posthog.capture('project_github_clicked', {
-                        project_title: title,
-                        url: github,
+                      trackEvent({
+                        name: 'project_github_clicked',
+                        properties: {
+                          project_title: title,
+                          url: github,
+                        },
                       });
                     }}
                     aria-label="View onGitHub"
@@ -185,9 +194,12 @@ export function ProjectCard({
               className="text-[12px] text-muted-foreground hover:text-foreground h-7 px-[10px] rounded-md"
               onClick={() => {
                 onOpenLightbox(title, screenshots);
-                posthog.capture('project_screenshots_viewed', {
-                  project_title: title,
-                  screenshot_count: screenshots.length,
+                trackEvent({
+                  name: 'project_screenshots_viewed',
+                  properties: {
+                    project_title: title,
+                    screenshot_count: screenshots.length,
+                  },
                 });
               }}
             >

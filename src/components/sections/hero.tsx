@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Github, Download, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import posthog from 'posthog-js';
+import { trackEvent } from '@/lib/events';
 
 const TAGLINE_INTERVAL_MS = 3000;
 
@@ -86,7 +86,10 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() =>
-                posthog.capture('hero_cta_clicked', { cta: 'github' })
+                trackEvent({
+                  name: 'hero_cta_clicked',
+                  properties: { cta: 'github' },
+                })
               }
             >
               <Github className="h-3.5 w-3.5 mr-1.5 shrink-0" />
@@ -105,7 +108,10 @@ export function Hero() {
               rel="noopener noreferrer"
               className="flex items-center justify-center"
               onClick={() =>
-                posthog.capture('hero_cta_clicked', { cta: 'linkedin' })
+                trackEvent({
+                  name: 'hero_cta_clicked',
+                  properties: { cta: 'linkedin' },
+                })
               }
             >
               <span className="mr-1.5 shrink-0 text-base">in</span>
@@ -122,7 +128,10 @@ export function Hero() {
               href="#contact"
               className="flex items-center justify-center"
               onClick={() =>
-                posthog.capture('hero_cta_clicked', { cta: 'contact' })
+                trackEvent({
+                  name: 'hero_cta_clicked',
+                  properties: { cta: 'contact' },
+                })
               }
             >
               <Mail className="h-3.5 w-3.5 mr-1.5 shrink-0" />
@@ -139,7 +148,10 @@ export function Hero() {
               href={siteConfig.resume}
               className="flex items-center justify-center"
               onClick={() =>
-                posthog.capture('hero_cta_clicked', { cta: 'resume' })
+                trackEvent({
+                  name: 'hero_cta_clicked',
+                  properties: { cta: 'resume' },
+                })
               }
             >
               <Download className="h-3.5 w-3.5 mr-1.5 shrink-0" />
