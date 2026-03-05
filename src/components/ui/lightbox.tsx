@@ -64,6 +64,13 @@ export function Lightbox({ isOpen, title, images, onClose }: LightboxProps) {
     };
   }, [isOpen]);
 
+  // Keep index in bounds if images array changes (e.g. different project)
+  useEffect(() => {
+    if (images.length === 0) return;
+    const maxIndex = images.length - 1;
+    setIndex((prev) => Math.min(prev, maxIndex));
+  }, [images]);
+
   // Preload adjacent images for smoother transitions
   useEffect(() => {
     if (!isOpen || images.length === 0) return;
@@ -88,8 +95,9 @@ export function Lightbox({ isOpen, title, images, onClose }: LightboxProps) {
 
   if (!isOpen || images.length === 0) return null;
 
-  const current = images[index];
-  const nextIndex = transitionTo;
+  const safeIndex = Math.min(Math.max(0, index), images.length - 1);
+  const current = images[safeIndex];
+  const nextIndex = transitionTo !== null ? Math.min(Math.max(0, transitionTo), images.length - 1) : null;
   const showingTwo = nextIndex !== null;
 
   return (
