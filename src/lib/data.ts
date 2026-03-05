@@ -216,7 +216,36 @@ export const projects = [
       'Generate beautiful PDF reports of your financial analytics',
     ],
     tags: ['Next.js', 'TypeScript', 'Tailwind', 'Shadcn/UI', 'Browser API'],
-    screenshots: [],
+    screenshots: [
+      {
+        src: '/assets/projects/screenshots/bemymunshi/passphrase.webp',
+        caption: 'Set passphrase to encrypt your data',
+      },
+      {
+        src: '/assets/projects/screenshots/bemymunshi/dashboard.webp',
+        caption: 'Dashboard to overview your finances',
+      },
+      {
+        src: '/assets/projects/screenshots/bemymunshi/transactions.webp',
+        caption: 'Track your transactions',
+      },
+      {
+        src: '/assets/projects/screenshots/bemymunshi/add-transaction.webp',
+        caption: 'Add a transaction',
+      },
+      {
+        src: '/assets/projects/screenshots/bemymunshi/accounts.webp',
+        caption: 'Manage your accounts',
+      },
+      {
+        src: '/assets/projects/screenshots/bemymunshi/goals.webp',
+        caption: 'Set your financial goals',
+      },
+      {
+        src: '/assets/projects/screenshots/bemymunshi/settings.webp',
+        caption: 'Manage your settings',
+      },
+    ],
   },
   {
     id: 'coralreef',
@@ -236,12 +265,16 @@ export const projects = [
     tags: ['VS Code', 'Dark Theme', 'UI/UX', 'JSON'],
     screenshots: [
       {
-        src: 'https://picsum.photos/id/48/400/300',
+        src: '/assets/projects/screenshots/coralreef/script.webp',
         caption: 'Coral Reef Dark Theme',
       },
       {
-        src: 'https://picsum.photos/id/1/400/300',
+        src: '/assets/projects/screenshots/coralreef/html.webp',
         caption: 'Coral Reef Dark Theme 2',
+      },
+      {
+        src: '/assets/projects/screenshots/coralreef/css.webp',
+        caption: 'Coral Reef Dark Theme 3',
       },
     ],
   },
@@ -261,16 +294,20 @@ export const projects = [
     tags: ['Angular', 'TypeScript', 'Browser API', 'HTML', 'CSS', 'UI/UX'],
     screenshots: [
       {
-        src: 'https://picsum.photos/id/20/400/300',
-        caption: 'Bookmarks view',
+        src: '/assets/projects/screenshots/ngdashboard/bookmark.webp',
+        caption: 'Manage your bookmarks',
       },
       {
-        src: 'https://picsum.photos/id/8/400/300',
-        caption: 'Notes view',
+        src: '/assets/projects/screenshots/ngdashboard/add-bookmark.webp',
+        caption: 'Add a new bookmark',
       },
       {
-        src: 'https://picsum.photos/id/2/400/300',
-        caption: 'Todo view',
+        src: '/assets/projects/screenshots/ngdashboard/todo.webp',
+        caption: 'Manage your todos',
+      },
+      {
+        src: '/assets/projects/screenshots/ngdashboard/notes.webp',
+        caption: 'Manage your notes',
       },
     ],
   },
