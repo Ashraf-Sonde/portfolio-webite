@@ -1,12 +1,13 @@
 'use client';
 
+import { useState } from 'react';
 import { siteConfig } from '@/lib/data';
 import { getEmail } from '@/lib/utils';
 import { SectionLabel } from '@/components/ui/section-label';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Github, Mail } from 'lucide-react';
+import { Check, Github, Mail } from 'lucide-react';
 import { trackEvent } from '@/lib/events';
 
 function urlDisplay(url: string): string {
@@ -19,6 +20,35 @@ function urlDisplay(url: string): string {
 }
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (isSubmitting || isSubmitted) return;
+    const form = e.currentTarget;
+    setIsSubmitting(true);
+    try {
+      const formData = new FormData(form);
+      const body = new URLSearchParams(
+        Array.from(formData.entries()) as [string, string][]
+      ).toString();
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body,
+      });
+      if (res.ok) {
+        setIsSubmitted(true);
+        trackEvent({ name: 'contact_form_submitted', properties: {} });
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <section id="contact" className="py-[60px]">
       <div className="max-w-content mx-auto px-6">
@@ -111,9 +141,7 @@ export function Contact() {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             className="flex flex-col gap-[10px]"
-            onSubmit={() =>
-              trackEvent({ name: 'contact_form_submitted', properties: {} })
-            }
+            onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
@@ -171,9 +199,19 @@ export function Contact() {
 
             <Button
               type="submit"
+              disabled={isSubmitting || isSubmitted}
               className="self-start font-mono-tight text-[12px] h-9 px-4 rounded-md"
             >
-              Send Message
+              {isSubmitted ? (
+                <>
+                  <Check className="h-3.5 w-3.5 shrink-0" />
+                  Submitted
+                </>
+              ) : isSubmitting ? (
+                'Sending…'
+              ) : (
+                'Send Message'
+              )}
             </Button>
           </form>
         </div>
