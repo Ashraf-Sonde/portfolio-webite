@@ -8,7 +8,6 @@ export function Writing() {
     <section id="writing" className="py-[60px]">
       <div className="max-w-content mx-auto px-6">
         <SectionLabel>Writing</SectionLabel>
-
         <Card className="border border-dashed border-border rounded-lg shadow-none">
           <CardContent className="p-9 text-center">
             <div className=" text-[12px] text-muted-foreground/80 mb-2">

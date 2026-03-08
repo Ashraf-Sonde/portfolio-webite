@@ -30,21 +30,24 @@ export function Lightbox({ isOpen, title, images, onClose }: LightboxProps) {
 
   const direction = transitionTo !== null ? directionRef.current : 0;
 
-  const goTo = useCallback((i: number) => {
-    if (i === index || transitionTo !== null) return;
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    directionRef.current = i > index ? 1 : -1;
-    setTransitionTo(i);
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => setSwipeActive(true));
-    });
-    timeoutRef.current = setTimeout(() => {
-      timeoutRef.current = null;
-      setIndex(i);
-      setTransitionTo(null);
-      setSwipeActive(false);
-    }, SWIPE_DURATION_MS);
-  }, [index, transitionTo]);
+  const goTo = useCallback(
+    (i: number) => {
+      if (i === index || transitionTo !== null) return;
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      directionRef.current = i > index ? 1 : -1;
+      setTransitionTo(i);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => setSwipeActive(true));
+      });
+      timeoutRef.current = setTimeout(() => {
+        timeoutRef.current = null;
+        setIndex(i);
+        setTransitionTo(null);
+        setSwipeActive(false);
+      }, SWIPE_DURATION_MS);
+    },
+    [index, transitionTo]
+  );
 
   const prev = useCallback(() => {
     if (index > 0) goTo(index - 1);
@@ -97,7 +100,10 @@ export function Lightbox({ isOpen, title, images, onClose }: LightboxProps) {
 
   const safeIndex = Math.min(Math.max(0, index), images.length - 1);
   const current = images[safeIndex];
-  const nextIndex = transitionTo !== null ? Math.min(Math.max(0, transitionTo), images.length - 1) : null;
+  const nextIndex =
+    transitionTo !== null
+      ? Math.min(Math.max(0, transitionTo), images.length - 1)
+      : null;
   const showingTwo = nextIndex !== null;
 
   return (
@@ -138,9 +144,10 @@ export function Lightbox({ isOpen, title, images, onClose }: LightboxProps) {
               <div
                 className="absolute inset-0 flex items-center justify-center"
                 style={{
-                  transform: swipeActive && showingTwo
-                    ? `translateX(${-direction * 100}%)`
-                    : 'translateX(0)',
+                  transform:
+                    swipeActive && showingTwo
+                      ? `translateX(${-direction * 100}%)`
+                      : 'translateX(0)',
                   transition: showingTwo
                     ? `transform ${SWIPE_DURATION_MS}ms ease-in-out`
                     : 'none',
