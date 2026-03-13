@@ -44,7 +44,7 @@ export function Experience() {
                   key={role.title}
                   icon={getIcon(role.icon)}
                   title={role.title}
-                  meta={`${role.type} · ${role.period}`}
+                  meta={`${role.type} ${role.period && role.type ? `·` : ''} ${role.period}`}
                   defaultOpen={companyIndex === 0 && roleIndex === 0}
                   bullets={role.bullets}
                   tags={role.tags}
