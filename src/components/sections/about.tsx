@@ -30,6 +30,7 @@ export function About() {
           is needed, I can deliver it without slowing the team down.
         </p>
 
+        {/* Stats */}
         <div className="grid grid-cols-3 gap-px border border-border rounded-lg overflow-hidden mt-8 bg-border">
           {aboutStats.map((stat) => (
             <Card
