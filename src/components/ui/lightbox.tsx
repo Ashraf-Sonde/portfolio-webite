@@ -115,8 +115,10 @@ export function Lightbox({ isOpen, title, images, onClose }: LightboxProps) {
         />
         <DialogPrimitive.Content
           className={cn(
-            'fixed left-[50%] top-[50%] z-50 flex flex-col w-full max-w-[820px] max-h-[90vh]',
-            'translate-x-[-50%] translate-y-[-50%] rounded-lg border border-border bg-card overflow-hidden',
+            'fixed z-50 flex flex-col rounded-lg border border-border bg-card overflow-hidden',
+            'left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2',
+            'w-[calc(100%-2rem)] max-w-[calc(100%-2rem)] max-h-[min(45vh,calc(100vh-2rem))]',
+            'sm:max-w-[1107px] sm:max-h-[90vh] sm:w-full',
             'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'
           )}
           onClick={(e) => e.target === e.currentTarget && onClose()}
@@ -138,7 +140,7 @@ export function Lightbox({ isOpen, title, images, onClose }: LightboxProps) {
             </Button>
           </div>
 
-          <div className="relative flex-1 flex items-center justify-center overflow-hidden bg-background min-h-[360px]">
+          <div className="relative flex-1 flex items-center justify-center overflow-hidden bg-background min-h-[243px] sm:min-h-[486px]">
             <div className="absolute inset-0 flex items-center justify-center">
               {/* Current / outgoing image — only animate when we're actively swiping */}
               <div
