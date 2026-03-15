@@ -4,6 +4,11 @@ import { useEffect, useState } from 'react';
 import { siteConfig } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 import { Github, Download, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { trackEvent } from '@/lib/events';
@@ -77,87 +82,107 @@ export function Hero() {
 
         <div className="fade-up fade-up-4 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-[10px]">
           {/* Github btn */}
-          <Button
-            asChild
-            className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center"
-          >
-            <a
-              href={siteConfig.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() =>
-                trackEvent({
-                  name: 'hero_cta_clicked',
-                  properties: { cta: 'github' },
-                })
-              }
-            >
-              <Github className="h-3.5 w-3.5 mr-1.5 shrink-0" />
-              <span className="truncate">GitHub</span>
-            </a>
-          </Button>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                asChild
+                className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center"
+              >
+                <a
+                  href={siteConfig.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    trackEvent({
+                      name: 'hero_cta_clicked',
+                      properties: { cta: 'github' },
+                    })
+                  }
+                >
+                  <Github className="h-3.5 w-3.5 mr-1.5 shrink-0" />
+                  <span className="truncate">GitHub</span>
+                </a>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>View github</TooltipContent>
+          </Tooltip>
 
           {/* LinkedIn btn */}
-          <Button
-            asChild
-            className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center bg-[#0d65c3] text-white hover:bg-[#0a54a0]"
-          >
-            <a
-              href={siteConfig.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-              onClick={() =>
-                trackEvent({
-                  name: 'hero_cta_clicked',
-                  properties: { cta: 'linkedin' },
-                })
-              }
-            >
-              <span className="mr-1.5 shrink-0 text-base">in</span>
-              <span className="truncate">LinkedIn</span>
-            </a>
-          </Button>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                asChild
+                className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center bg-[#0d65c3] text-white hover:bg-[#0a54a0]"
+              >
+                <a
+                  href={siteConfig.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
+                  onClick={() =>
+                    trackEvent({
+                      name: 'hero_cta_clicked',
+                      properties: { cta: 'linkedin' },
+                    })
+                  }
+                >
+                  <span className="mr-1.5 shrink-0 text-base">in</span>
+                  <span className="truncate">LinkedIn</span>
+                </a>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>Connect on linkedin</TooltipContent>
+          </Tooltip>
 
           {/* Contact btn */}
-          <Button
-            asChild
-            className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-amber-500 hover:bg-amber-500/90 text-black"
-          >
-            <a
-              href="#contact"
-              className="flex items-center justify-center"
-              onClick={() =>
-                trackEvent({
-                  name: 'hero_cta_clicked',
-                  properties: { cta: 'contact' },
-                })
-              }
-            >
-              <Mail className="h-3.5 w-3.5 mr-1.5 shrink-0" />
-              <span className="truncate">Contact</span>
-            </a>
-          </Button>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                asChild
+                className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-amber-500 hover:bg-amber-500/90 text-black"
+              >
+                <a
+                  href="#contact"
+                  className="flex items-center justify-center"
+                  onClick={() =>
+                    trackEvent({
+                      name: 'hero_cta_clicked',
+                      properties: { cta: 'contact' },
+                    })
+                  }
+                >
+                  <Mail className="h-3.5 w-3.5 mr-1.5 shrink-0" />
+                  <span className="truncate">Contact</span>
+                </a>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>Get in touch</TooltipContent>
+          </Tooltip>
 
           {/* Resume btn */}
-          <Button
-            asChild
-            className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-neutral-500 hover:bg-neutral-500/90 text-white"
-          >
-            <a
-              href={siteConfig.resume}
-              className="flex items-center justify-center"
-              onClick={() =>
-                trackEvent({
-                  name: 'hero_cta_clicked',
-                  properties: { cta: 'resume' },
-                })
-              }
-            >
-              <Download className="h-3.5 w-3.5 mr-1.5 shrink-0" />
-              <span className="truncate">Resume</span>
-            </a>
-          </Button>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                asChild
+                className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-neutral-500 hover:bg-neutral-500/90 text-white"
+              >
+                <a
+                  href={siteConfig.resume}
+                  className="flex items-center justify-center"
+                  onClick={() =>
+                    trackEvent({
+                      name: 'hero_cta_clicked',
+                      properties: { cta: 'resume' },
+                    })
+                  }
+                >
+                  <Download className="h-3.5 w-3.5 mr-1.5 shrink-0" />
+                  <span className="truncate">Resume</span>
+                </a>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>View resume</TooltipContent>
+          </Tooltip>
         </div>
       </div>
     </section>

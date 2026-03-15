@@ -19,6 +19,11 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { trackEvent } from '@/lib/events';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '../ui/tooltip';
 
 export interface Screenshot {
   src: string;
@@ -94,58 +99,68 @@ export function ProjectCard({
             </div>
             <div className="flex items-center gap-[6px] flex-shrink-0 pt-[2px]">
               {website && (
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="h-8 w-8 text-muted-foreground hover:text-foreground rounded-md"
-                  asChild
-                >
-                  <a
-                    href={website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      trackEvent({
-                        name: 'project_website_clicked',
-                        properties: {
-                          project_title: title,
-                          url: website,
-                        },
-                      });
-                    }}
-                    aria-label="Visit website"
-                  >
-                    <Link className="h-4 w-4" aria-hidden="true" />
-                  </a>
-                </Button>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-8 w-8 text-muted-foreground hover:text-foreground rounded-md"
+                      asChild
+                    >
+                      <a
+                        href={website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          trackEvent({
+                            name: 'project_website_clicked',
+                            properties: {
+                              project_title: title,
+                              url: website,
+                            },
+                          });
+                        }}
+                        aria-label="Visit website"
+                      >
+                        <Link className="h-4 w-4" aria-hidden="true" />
+                      </a>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>Visit website</TooltipContent>
+                </Tooltip>
               )}
               {github && (
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="h-8 w-8 text-muted-foreground hover:text-foreground rounded-md"
-                  asChild
-                >
-                  <a
-                    href={github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      trackEvent({
-                        name: 'project_github_clicked',
-                        properties: {
-                          project_title: title,
-                          url: github,
-                        },
-                      });
-                    }}
-                    aria-label="View onGitHub"
-                  >
-                    <Github className="h-4 w-4" aria-hidden="true" />
-                  </a>
-                </Button>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-8 w-8 text-muted-foreground hover:text-foreground rounded-md"
+                      asChild
+                    >
+                      <a
+                        href={github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          trackEvent({
+                            name: 'project_github_clicked',
+                            properties: {
+                              project_title: title,
+                              url: github,
+                            },
+                          });
+                        }}
+                        aria-label="View on GitHub"
+                      >
+                        <Github className="h-4 w-4" aria-hidden="true" />
+                      </a>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>View on GitHub</TooltipContent>
+                </Tooltip>
               )}
               <div className="text-muted-foreground w-4 h-4 flex items-center justify-center">
                 {open ? (

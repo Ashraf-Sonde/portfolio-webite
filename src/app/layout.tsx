@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Inter_Tight } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/lib/data';
+import { TooltipProvider } from '@/components/ui/tooltip';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -97,11 +98,13 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className={inter.className}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
-        />
-        {children}
+        <TooltipProvider delayDuration={300}>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+          />
+          {children}
+        </TooltipProvider>
       </body>
     </html>
   );
