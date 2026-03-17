@@ -68,16 +68,19 @@ export function Hero() {
         </div>
 
         <p className="fade-up fade-up-3 text-base text-justify text-muted-foreground max-w-[100%] leading-[1.5] mb-9">
-          I design systems that handle{' '}
+          I design and lead{' '}
           <strong className="text-foreground font-medium">
-            millions of requests
+            high-scale systems
           </strong>{' '}
-          without blinking — with a sharp focus on{' '}
+          with a focus on reliability, latency, and operational clarity — translating{' '}
           <strong className="text-foreground font-medium">
-            reliability, latency, and operational clarity
+            technical decisions into measurable business outcomes
           </strong>
-          . I write backend code that scales, and frontend code that
-          doesn&apos;t embarrass it.
+          . I take end-to-end ownership of products, ensuring{' '}
+          <strong className="text-foreground font-medium">
+            engineering excellence
+          </strong>{' '}
+          drives real impact.
         </p>
 
         <div className="fade-up fade-up-4 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-[10px]">
