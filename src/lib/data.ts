@@ -357,7 +357,7 @@ export const skills = [
   },
   {
     label: 'Cloud / Infra',
-    tags: ['AWS', 'GCP', 'Docker', 'RabbitMQ', 'Nginx', 'Apache2', 'PM2'],
+    tags: ['AWS', 'GCP', 'Docker', 'RabbitMQ', 'Linux', 'Nginx', 'Apache2', 'PM2'],
   },
   {
     label: 'Frontend',
