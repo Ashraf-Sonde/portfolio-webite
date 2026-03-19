@@ -342,35 +342,183 @@ export const skills = [
   {
     label: 'Backend',
     tags: [
-      'Node.js',
-      'Nest.js',
-      'TypeScript',
-      'REST',
-      'Microservices',
-      'Python',
-      'PHP',
+      {
+        name: 'Node.js',
+        url: 'https://en.wikipedia.org/wiki/Node.js',
+        icon: 'https://cdn.simpleicons.org/nodedotjs/339933',
+      },
+      {
+        name: 'Nest.js',
+        url: 'https://en.wikipedia.org/wiki/NestJS',
+        icon: 'https://cdn.simpleicons.org/nestjs/E0234E',
+      },
+      {
+        name: 'REST',
+        url: 'https://en.wikipedia.org/wiki/Representational_state_transfer',
+        icon: 'Workflow',
+      },
+      {
+        name: 'TypeScript',
+        url: 'https://en.wikipedia.org/wiki/TypeScript',
+        icon: 'https://cdn.simpleicons.org/typescript/3178C6',
+      },
+      {
+        name: 'Microservices',
+        url: '',
+        icon: 'Network',
+      },
+      {
+        name: 'Python',
+        url: 'https://en.wikipedia.org/wiki/Python_(programming_language)',
+        icon: 'https://cdn.simpleicons.org/python/3776AB',
+      },
+      {
+        name: 'FastAPI',
+        url: 'https://en.wikipedia.org/wiki/FastAPI',
+        icon: 'https://cdn.simpleicons.org/fastapi/009688',
+      },
+      {
+        name: 'PHP',
+        url: 'https://en.wikipedia.org/wiki/PHP',
+        icon: 'https://cdn.simpleicons.org/php/777BB4',
+      },
+      {
+        name: 'Wordpress',
+        url: 'https://en.wikipedia.org/wiki/Google_OR-Tools',
+        icon: 'https://cdn.simpleicons.org/wordpress/21759B',
+      }
     ],
   },
   {
     label: 'Frontend',
     tags: [
-      'React',
-      'Next.js',
-      'TypeScript',
-      'Angular',
-      'Tailwind',
-      'Material UI',
-      'Shadcn/UI',
+      {
+        name: 'React',
+        url: 'https://en.wikipedia.org/wiki/React_(software)',
+        icon: 'https://cdn.simpleicons.org/react/61DAFB',
+      },
+      {
+        name: 'Next.js',
+        url: 'https://en.wikipedia.org/wiki/Next.js',
+        icon: 'https://cdn.simpleicons.org/nextdotjs/ffffff',
+      },
+      {
+        name: 'TypeScript',
+        url: 'https://en.wikipedia.org/wiki/TypeScript',
+        icon: 'https://cdn.simpleicons.org/typescript/3178C6',
+      },
+      {
+        name: 'Shadcn/UI',
+        url: 'https://ui.shadcn.com/',
+        icon: 'https://cdn.simpleicons.org/shadcnui/ffffff',
+      },
+      {
+        name: 'Tailwind',
+        url: 'https://en.wikipedia.org/wiki/Tailwind_CSS',
+        icon: 'https://cdn.simpleicons.org/tailwindcss/06B6D4',
+      },
+      {
+        name: 'Angular',
+        url: 'https://en.wikipedia.org/wiki/Angular_(web_framework)',
+        icon: 'https://cdn.simpleicons.org/angular/DD0031',
+      },
+      {
+        name: 'Material UI',
+        url: 'https://en.wikipedia.org/wiki/Material_Design',
+        icon: 'https://cdn.simpleicons.org/mui/007FFF',
+      },
     ],
   },
   {
-    label: 'Databases',
-    tags: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'],
+    label: 'Database',
+    tags: [
+      {
+        name: 'PostgreSQL',
+        url: 'https://en.wikipedia.org/wiki/PostgreSQL',
+        icon: 'https://cdn.simpleicons.org/postgresql/4169E1',
+      },
+      {
+        name: 'MySQL',
+        url: 'https://en.wikipedia.org/wiki/MySQL',
+        icon: 'https://cdn.simpleicons.org/mysql/4479A1',
+      },
+      {
+        name: 'Redis',
+        url: 'https://en.wikipedia.org/wiki/Redis',
+        icon: 'https://cdn.simpleicons.org/redis/DC382D',
+      },
+      {
+        name: 'MongoDB',
+        url: 'https://en.wikipedia.org/wiki/MongoDB',
+        icon: 'https://cdn.simpleicons.org/mongodb/47A248',
+      },
+    ],
   },
   {
     label: 'Cloud / Infra',
-    tags: ['AWS', 'GCP', 'Docker', 'RabbitMQ', 'Linux', 'Nginx', 'Apache2', 'PM2'],
-  }
+    tags: [
+      {
+        name: 'AWS',
+        url: 'https://en.wikipedia.org/wiki/Amazon_Web_Services',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/500px-Amazon_Web_Services_Logo.svg.png',
+      },
+      {
+        name: 'GCP',
+        url: 'https://en.wikipedia.org/wiki/Google_Cloud_Platform',
+        icon: 'https://cdn.simpleicons.org/googlecloud/4285F4',
+      },
+      {
+        name: 'Docker',
+        url: 'https://en.wikipedia.org/wiki/Docker_(software)',
+        icon: 'https://cdn.simpleicons.org/docker/2496ED',
+      },
+      {
+        name: 'RabbitMQ',
+        url: 'https://en.wikipedia.org/wiki/RabbitMQ',
+        icon: 'https://cdn.simpleicons.org/rabbitmq/FF6600',
+      },
+      {
+        name: 'Linux',
+        url: 'https://en.wikipedia.org/wiki/Linux',
+        icon: 'https://cdn.simpleicons.org/linux/FCC624',
+      },
+      {
+        name: 'Nginx',
+        url: 'https://en.wikipedia.org/wiki/Nginx',
+        icon: 'https://cdn.simpleicons.org/nginx/009639',
+      },
+      {
+        name: 'Apache2',
+        url: 'https://en.wikipedia.org/wiki/Apache_HTTP_Server',
+        icon: 'https://cdn.simpleicons.org/apache/EA2D2E',
+      },
+      {
+        name: 'PM2',
+        url: 'https://en.wikipedia.org/wiki/PM2_(software)',
+        icon: 'https://cdn.simpleicons.org/pm2/2B037A',
+      },
+    ],
+  },
+  {
+    label: 'Automation / AI Tools',
+    tags: [
+      {
+        name: 'Claude code',
+        url: 'https://en.wikipedia.org/wiki/TensorFlow',
+        icon: 'https://cdn.simpleicons.org/claude/D97757',
+      },
+      {
+        name: 'Cursor',
+        url: 'https://en.wikipedia.org/wiki/TensorFlow',
+        icon: 'https://cdn.simpleicons.org/cursor/ffffff',
+      },
+      {
+        name: 'n8n',
+        url: 'https://en.wikipedia.org/wiki/TensorFlow',
+        icon: 'https://cdn.simpleicons.org/n8n/EA4B71',
+      },
+    ],
+  },
 ];
 
 export const writingTopics = [
