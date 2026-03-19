@@ -352,14 +352,6 @@ export const skills = [
     ],
   },
   {
-    label: 'Databases',
-    tags: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'],
-  },
-  {
-    label: 'Cloud / Infra',
-    tags: ['AWS', 'GCP', 'Docker', 'RabbitMQ', 'Linux', 'Nginx', 'Apache2', 'PM2'],
-  },
-  {
     label: 'Frontend',
     tags: [
       'React',
@@ -371,6 +363,14 @@ export const skills = [
       'Shadcn/UI',
     ],
   },
+  {
+    label: 'Databases',
+    tags: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'],
+  },
+  {
+    label: 'Cloud / Infra',
+    tags: ['AWS', 'GCP', 'Docker', 'RabbitMQ', 'Linux', 'Nginx', 'Apache2', 'PM2'],
+  }
 ];
 
 export const writingTopics = [
