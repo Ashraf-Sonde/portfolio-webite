@@ -344,49 +344,44 @@ export const skills = [
     tags: [
       {
         name: 'Node.js',
-        url: 'https://en.wikipedia.org/wiki/Node.js',
+        url: 'https://nodejs.org/en',
         icon: 'https://cdn.simpleicons.org/nodedotjs/339933',
       },
       {
         name: 'Nest.js',
-        url: 'https://en.wikipedia.org/wiki/NestJS',
+        url: 'https://nestjs.com/',
         icon: 'https://cdn.simpleicons.org/nestjs/E0234E',
       },
       {
-        name: 'REST',
-        url: 'https://en.wikipedia.org/wiki/Representational_state_transfer',
-        icon: 'Workflow',
-      },
-      {
         name: 'TypeScript',
-        url: 'https://en.wikipedia.org/wiki/TypeScript',
+        url: 'https://www.typescriptlang.org/',
         icon: 'https://cdn.simpleicons.org/typescript/3178C6',
       },
       {
-        name: 'Microservices',
-        url: '',
-        icon: 'Network',
-      },
-      {
         name: 'Python',
-        url: 'https://en.wikipedia.org/wiki/Python_(programming_language)',
+        url: 'https://www.python.org/',
         icon: 'https://cdn.simpleicons.org/python/3776AB',
       },
       {
         name: 'FastAPI',
-        url: 'https://en.wikipedia.org/wiki/FastAPI',
+        url: 'https://fastapi.tiangolo.com/',
         icon: 'https://cdn.simpleicons.org/fastapi/009688',
       },
       {
         name: 'PHP',
-        url: 'https://en.wikipedia.org/wiki/PHP',
+        url: 'https://www.php.net/',
         icon: 'https://cdn.simpleicons.org/php/777BB4',
       },
       {
         name: 'Wordpress',
-        url: 'https://en.wikipedia.org/wiki/Google_OR-Tools',
+        url: 'hhttps://wordpress.com/',
         icon: 'https://cdn.simpleicons.org/wordpress/21759B',
-      }
+      },
+      {
+        name: 'WooCommerce',
+        url: 'https://woocommerce.com/',
+        icon: 'https://cdn.simpleicons.org/woocommerce/222222',
+      },
     ],
   },
   {
@@ -394,17 +389,17 @@ export const skills = [
     tags: [
       {
         name: 'React',
-        url: 'https://en.wikipedia.org/wiki/React_(software)',
+        url: 'https://react.dev/',
         icon: 'https://cdn.simpleicons.org/react/61DAFB',
       },
       {
         name: 'Next.js',
-        url: 'https://en.wikipedia.org/wiki/Next.js',
+        url: 'https://nextjs.org/',
         icon: 'https://cdn.simpleicons.org/nextdotjs/ffffff',
       },
       {
         name: 'TypeScript',
-        url: 'https://en.wikipedia.org/wiki/TypeScript',
+        url: 'https://www.typescriptlang.org/',
         icon: 'https://cdn.simpleicons.org/typescript/3178C6',
       },
       {
@@ -414,17 +409,17 @@ export const skills = [
       },
       {
         name: 'Tailwind',
-        url: 'https://en.wikipedia.org/wiki/Tailwind_CSS',
+        url: 'https://tailwindcss.com/',
         icon: 'https://cdn.simpleicons.org/tailwindcss/06B6D4',
       },
       {
         name: 'Angular',
-        url: 'https://en.wikipedia.org/wiki/Angular_(web_framework)',
+        url: 'https://angular.dev/',
         icon: 'https://cdn.simpleicons.org/angular/DD0031',
       },
       {
         name: 'Material UI',
-        url: 'https://en.wikipedia.org/wiki/Material_Design',
+        url: 'https://mui.com/material-ui/',
         icon: 'https://cdn.simpleicons.org/mui/007FFF',
       },
     ],
@@ -434,23 +429,23 @@ export const skills = [
     tags: [
       {
         name: 'PostgreSQL',
-        url: 'https://en.wikipedia.org/wiki/PostgreSQL',
+        url: 'https://www.postgresql.org/',
         icon: 'https://cdn.simpleicons.org/postgresql/4169E1',
       },
       {
         name: 'MySQL',
-        url: 'https://en.wikipedia.org/wiki/MySQL',
+        url: 'https://www.mysql.com/',
         icon: 'https://cdn.simpleicons.org/mysql/4479A1',
       },
       {
-        name: 'Redis',
-        url: 'https://en.wikipedia.org/wiki/Redis',
-        icon: 'https://cdn.simpleicons.org/redis/DC382D',
+        name: 'MongoDB',
+        url: 'https://www.mongodb.com/',
+        icon: 'https://cdn.simpleicons.org/mongodb/47A248',
       },
       {
-        name: 'MongoDB',
-        url: 'https://en.wikipedia.org/wiki/MongoDB',
-        icon: 'https://cdn.simpleicons.org/mongodb/47A248',
+        name: 'Redis',
+        url: 'https://redis.io/',
+        icon: 'https://cdn.simpleicons.org/redis/DC382D',
       },
     ],
   },
@@ -459,42 +454,42 @@ export const skills = [
     tags: [
       {
         name: 'AWS',
-        url: 'https://en.wikipedia.org/wiki/Amazon_Web_Services',
+        url: 'https://aws.amazon.com/',
         icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/500px-Amazon_Web_Services_Logo.svg.png',
       },
       {
         name: 'GCP',
-        url: 'https://en.wikipedia.org/wiki/Google_Cloud_Platform',
+        url: 'https://cloud.google.com/',
         icon: 'https://cdn.simpleicons.org/googlecloud/4285F4',
       },
       {
         name: 'Docker',
-        url: 'https://en.wikipedia.org/wiki/Docker_(software)',
+        url: 'https://www.docker.com/',
         icon: 'https://cdn.simpleicons.org/docker/2496ED',
       },
       {
         name: 'RabbitMQ',
-        url: 'https://en.wikipedia.org/wiki/RabbitMQ',
+        url: 'https://www.rabbitmq.com/',
         icon: 'https://cdn.simpleicons.org/rabbitmq/FF6600',
       },
       {
         name: 'Linux',
-        url: 'https://en.wikipedia.org/wiki/Linux',
+        url: 'https://ubuntu.com/server',
         icon: 'https://cdn.simpleicons.org/linux/FCC624',
       },
       {
         name: 'Nginx',
-        url: 'https://en.wikipedia.org/wiki/Nginx',
+        url: 'https://nginx.org/',
         icon: 'https://cdn.simpleicons.org/nginx/009639',
       },
       {
         name: 'Apache2',
-        url: 'https://en.wikipedia.org/wiki/Apache_HTTP_Server',
+        url: 'https://httpd.apache.org/',
         icon: 'https://cdn.simpleicons.org/apache/EA2D2E',
       },
       {
         name: 'PM2',
-        url: 'https://en.wikipedia.org/wiki/PM2_(software)',
+        url: 'https://pm2.keymetrics.io/',
         icon: 'https://cdn.simpleicons.org/pm2/2B037A',
       },
     ],
@@ -504,17 +499,17 @@ export const skills = [
     tags: [
       {
         name: 'Claude code',
-        url: 'https://en.wikipedia.org/wiki/TensorFlow',
+        url: 'https://code.claude.com/docs/en/overview',
         icon: 'https://cdn.simpleicons.org/claude/D97757',
       },
       {
         name: 'Cursor',
-        url: 'https://en.wikipedia.org/wiki/TensorFlow',
+        url: 'https://cursor.com/',
         icon: 'https://cdn.simpleicons.org/cursor/ffffff',
       },
       {
         name: 'n8n',
-        url: 'https://en.wikipedia.org/wiki/TensorFlow',
+        url: 'https://n8n.io/',
         icon: 'https://cdn.simpleicons.org/n8n/EA4B71',
       },
     ],

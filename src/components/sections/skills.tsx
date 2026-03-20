@@ -73,7 +73,7 @@ export function Skills() {
                       key={t.name}
                       asChild
                       variant="outline"
-                      className="h-8 rounded-lg border-border/70 bg-background/50 px-2 text-[13px] font-normal text-foreground hover:bg-accent/40 hover:text-foreground"
+                      className="h-8 rounded-lg border-border/80 bg-background/50 px-2 text-sm font-normal text-foreground hover:bg-accent/40 hover:text-foreground"
                     >
                       <a
                         href={t.url}
