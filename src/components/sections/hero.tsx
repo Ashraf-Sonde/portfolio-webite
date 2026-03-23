@@ -163,29 +163,31 @@ export function Hero() {
           </Tooltip>
 
           {/* Resume btn */}
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                asChild
-                className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-neutral-500 hover:bg-neutral-500/90 text-white"
-              >
-                <a
-                  href={siteConfig.resume}
-                  className="flex items-center justify-center"
-                  onClick={() =>
-                    trackEvent({
-                      name: 'hero_cta_clicked',
-                      properties: { cta: 'resume' },
-                    })
-                  }
+          {siteConfig.resume && (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button
+                  asChild
+                  className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-neutral-500 hover:bg-neutral-500/90 text-white"
                 >
-                  <Download className="h-3.5 w-3.5 mr-1.5 shrink-0" />
-                  <span className="truncate">Resume</span>
-                </a>
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>View resume</TooltipContent>
-          </Tooltip>
+                  <a
+                    href={siteConfig.resume}
+                    className="flex items-center justify-center"
+                    onClick={() =>
+                      trackEvent({
+                        name: 'hero_cta_clicked',
+                        properties: { cta: 'resume' },
+                      })
+                    }
+                  >
+                    <Download className="h-3.5 w-3.5 mr-1.5 shrink-0" />
+                    <span className="truncate">Resume</span>
+                  </a>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>View resume</TooltipContent>
+            </Tooltip>
+          )}
         </div>
       </div>
     </section>

@@ -14,7 +14,7 @@ export const siteConfig = {
   github: 'https://github.com/Ashraf-Sonde',
   linkedin: 'https://linkedin.com/in/ashraf-sonde',
   email: 'b3V0cmVhY2guYXNocmFmQGdtYWlsLmNvbQ==',
-  resume: '#',
+  resume: '',
 };
 
 export const aboutStats = [
