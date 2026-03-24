@@ -35,7 +35,7 @@ export const experience = [
         period: '03.2025 – Present',
         icon: 'DraftingCompass',
         bullets: [
-          'Owned end-to-end product development of CloudTrack, a cloud-native SaaS TMS — translating logistics business requirements into a fully functional multi-tenant platform spanning transporter auctions, trip management, real-time tracking, agreement management, and automated billing & invoicing.',
+          'Owned end-to-end product development of CloudTrack, a cloud-native SaaS TMS — translating logistics business requirements into a fully functional multi-tenant platform spanning transporter auctions, trip management, real-time tracking via mobile GPS / SIM / Device, agreement management, and automated billing & invoicing.',
           'Architected a scalable microservices ecosystem with enterprise-grade RBAC and multi-channel communication (WhatsApp, Email, SMS), enabling independent deployability, fault isolation, and fine-grained access control across all platform modules.',
           'Led a lean team of 3 from zero to production in ~10 months, driving an estimated ~40% improvement in logistics operational efficiency by replacing manual workflows with visibility and end-to-end automated trip lifecycle and billing management.',
         ],
