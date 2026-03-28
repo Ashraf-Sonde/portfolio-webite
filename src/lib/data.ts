@@ -380,7 +380,7 @@ export const skills = [
       {
         name: 'WooCommerce',
         url: 'https://woocommerce.com/',
-        icon: 'https://cdn.simpleicons.org/woocommerce/222222',
+        icon: 'https://imgs.search.brave.com/Ul49LZR0XOTP92VrabOkiK88SSYQtnTfbigNZWrX6so/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi81LzUxL1dv/b0NvbW1lcmNlX2xv/Z29fJTI4MjAxNSUy/OS5zdmcvMjUwcHgt/V29vQ29tbWVyY2Vf/bG9nb18lMjgyMDE1/JTI5LnN2Zy5wbmc',
       },
     ],
   },
@@ -395,7 +395,7 @@ export const skills = [
       {
         name: 'Next.js',
         url: 'https://nextjs.org/',
-        icon: 'https://cdn.simpleicons.org/nextdotjs/ffffff',
+        icon: 'https://cdn.simpleicons.org/nextdotjs/000000',
       },
       {
         name: 'TypeScript',
@@ -405,7 +405,7 @@ export const skills = [
       {
         name: 'Shadcn/UI',
         url: 'https://ui.shadcn.com/',
-        icon: 'https://cdn.simpleicons.org/shadcnui/ffffff',
+        icon: 'https://cdn.simpleicons.org/shadcnui/000000',
       },
       {
         name: 'Tailwind',

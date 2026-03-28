@@ -23,13 +23,19 @@ const lucideIcons: Record<string, LucideIcon> = {
 };
 
 function renderTechIcon(icon: string, name: string) {
-  if (icon.startsWith('http') || icon.startsWith('/')) {
+  if (icon.startsWith('https') || icon.startsWith('/')) {
+    const isMonochrome =
+      name === 'Next.js' || name === 'Shadcn/UI' || name === 'AWS';
     return (
       // eslint-disable-next-line @next/next/no-img-element
       <img
         src={icon}
         alt={name}
-        className="h-4 w-4 object-contain"
+        className={
+          isMonochrome
+            ? 'h-4 w-4 object-contain dark:invert'
+            : 'h-4 w-4 object-contain'
+        }
         loading="lazy"
       />
     );
