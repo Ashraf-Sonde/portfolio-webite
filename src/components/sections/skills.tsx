@@ -25,7 +25,7 @@ const lucideIcons: Record<string, LucideIcon> = {
 function renderTechIcon(icon: string, name: string) {
   if (icon.startsWith('https') || icon.startsWith('/')) {
     const isMonochrome =
-      name === 'Next.js' || name === 'Shadcn/UI' || name === 'AWS';
+      name === 'Next.js' || name === 'Shadcn/UI' || name === 'AWS' || name === 'Cursor';
     return (
       // eslint-disable-next-line @next/next/no-img-element
       <img

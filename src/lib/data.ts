@@ -505,7 +505,7 @@ export const skills = [
       {
         name: 'Cursor',
         url: 'https://cursor.com/',
-        icon: 'https://cdn.simpleicons.org/cursor/ffffff',
+        icon: 'https://cdn.simpleicons.org/cursor/000000',
       },
       {
         name: 'n8n',

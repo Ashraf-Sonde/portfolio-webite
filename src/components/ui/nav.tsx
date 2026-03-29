@@ -99,6 +99,20 @@ export function Nav() {
             variant="ghost"
             size="sm"
             onClick={() => {
+              scrollTo('#skills');
+              trackEvent({
+                name: 'nav_section_clicked',
+                properties: { section: 'skills' },
+              });
+            }}
+            className="hidden sm:flex text-[13px] text-muted-foreground hover:text-foreground h-8 px-[10px] rounded-md"
+          >
+            Skills
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => {
               scrollTo('#contact');
               trackEvent({
                 name: 'nav_section_clicked',
