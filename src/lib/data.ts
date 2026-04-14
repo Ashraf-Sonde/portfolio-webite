@@ -91,8 +91,8 @@ export const experience = [
         period: '03.2024 – 02.2025',
         icon: 'DraftingCompass',
         bullets: [
-          'Designed and implemented a scalable microservices architecture with NestJS, TypeScript, and PostgreSQL, enhancing system efficiency and maintainability.',
-          'Developed the collaborative workbench for lawyers and clients to manage their cases and documents.',
+          'Designed and built a robust, scalable backend system that improved overall efficiency and made the platform easier to maintain and grow.',
+          'Developed the collaborative workbench for lawyers and clients to manage their cases and documents, improving collaboration and efficiency.',
           'Optimized GCP cloud infrastructure, improving deployment speed, scalability, and cost efficiency.',
           'Established SDLC best practices and mentored the tech team, ensuring long-term development continuity and accelerating product execution.',
         ],
