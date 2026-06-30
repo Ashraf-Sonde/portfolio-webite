@@ -6,7 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 export function Writing() {
   return (
     <section id="writing" className="py-[60px]">
-      <div className="max-w-content mx-auto px-6">
+      <div className="max-w-content mx-auto px-6 md:px-0">
         <SectionLabel>Writing</SectionLabel>
         <Card className="border border-dashed border-border rounded-lg shadow-none">
           <CardContent className="p-9 text-center">

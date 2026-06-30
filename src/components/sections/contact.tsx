@@ -51,7 +51,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-[60px]">
-      <div className="max-w-content mx-auto px-6">
+      <div className="max-w-content mx-auto px-6 md:px-0">
         <SectionLabel>Contact</SectionLabel>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

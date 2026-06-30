@@ -19,7 +19,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="py-[60px]">
-      <div className="max-w-content mx-auto px-6">
+      <div className="max-w-content mx-auto px-6 md:px-0">
         <SectionLabel>Projects ({projects.length})</SectionLabel>
 
         <div className="flex flex-col gap-3">

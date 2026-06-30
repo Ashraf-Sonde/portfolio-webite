@@ -33,7 +33,7 @@ export function Hero() {
 
   return (
     <section id="hero" className="py-[60px]">
-      <div className="max-w-content mx-auto px-6">
+      <div className="max-w-content mx-auto px-6 md:px-0">
         <Badge
           variant="secondary"
           className={cn(

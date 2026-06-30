@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 export function About() {
   return (
     <section id="about" className="py-[60px]">
-      <div className="max-w-content mx-auto px-6">
+      <div className="max-w-content mx-auto px-6 md:px-0">
         <SectionLabel>About</SectionLabel>
 
         <p className="text-base text-justify text-muted-foreground leading-[1.8] max-w-[100%]">

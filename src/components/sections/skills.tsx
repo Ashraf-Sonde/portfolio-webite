@@ -56,7 +56,7 @@ function categoryIcon(label: string) {
 export function Skills() {
   return (
     <section id="skills" className="py-[60px]">
-      <div className="max-w-content mx-auto px-6">
+      <div className="max-w-content mx-auto px-6 md:px-0">
         <SectionLabel>Stack</SectionLabel>
 
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
