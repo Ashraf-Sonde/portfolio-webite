@@ -74,7 +74,7 @@ const config: Config = {
         },
       },
       maxWidth: {
-        content: '760px',
+        content: '960px',
       },
       keyframes: {
         'accordion-down': {

@@ -304,6 +304,40 @@ export const projects = [
     ],
   },
   {
+    id: 'ozone',
+    title: 'Ozone electric website',
+    icon: '/assets/projects/logos/ozone.png',
+    tagline:
+      'Custom marketing website for Ozone electric',
+    defaultOpen: false,
+    github: '',
+    website: 'https://ozoneelectric.in/',
+    bullets: [
+      `Responsive marketing site showcasing Ozone Electric's products and services`,
+      'Built with Next.js, Tailwind, Shadcn/UI, and TypeScript',
+      'Optimized for SEO and performance',
+    ],
+    tags: ['Next.js', 'Tailwind', 'Shadcn/UI', 'TypeScript'],
+    screenshots: [
+      {
+        src: '/assets/projects/screenshots/ozone/ozone-1.webp',
+        caption: 'Hero section',
+      },
+      {
+        src: '/assets/projects/screenshots/ozone/ozone-2.webp',
+        caption: 'Product section',
+      },
+      {
+        src: '/assets/projects/screenshots/ozone/ozone-3.webp',
+        caption: 'Contact section',
+      },
+      {
+        src: '/assets/projects/screenshots/ozone/ozone-4.webp',
+        caption: 'Lighthouse report',
+      },
+    ],
+  },
+  {
     id: 'ngdashboard',
     title: 'Angular Dashboard',
     icon: 'https://dashboard-angularr.netlify.app/favicon.ico',
