@@ -67,7 +67,7 @@ export function Contact() {
             <div className="flex flex-col gap-2">
               <Button
                 asChild
-                className="justify-start h-auto py-2 px-3 font-mono-tight text-[13px] bg-card bg-amber-500 hover:bg-amber-500/90 text-black"
+                className="justify-start h-auto py-2 px-3 font-mono-tight text-[13px] text-black bg-card border border-amber-500 hover:bg-amber-50 h-11 w-full sm:h-9 dark:text-amber-500 dark:hover:bg-amber-50/10"
               >
                 <a
                   href={`mailto:${getEmail()}`}
@@ -81,14 +81,14 @@ export function Contact() {
                   }
                 >
                   <span className="text-[15px] mr-2">
-                    <Mail />
+                    <Mail className="text-amber-500" />
                   </span>
                   {getEmail()}
                 </a>
               </Button>
               <Button
                 asChild
-                className="font-mono-tight text-[13px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-start"
+                className="font-mono-tight text-[13px] text-black h-11 w-full sm:h-9 sm:w-auto px-3 rounded-md justify-start border border-black bg-card hover:bg-gray-200 dark:text-gray-300 dark:border-gray-300 dark:hover:bg-gray-300/10"
               >
                 <a
                   href={siteConfig.github}
@@ -104,14 +104,16 @@ export function Contact() {
                     })
                   }
                 >
-                  <Github className="h-3.5 w-3.5 mr-1.5 shrink-0" />
+                  <span className="text-[15px] mr-2">
+                    <Github className="text-black dark:text-gray-300" />
+                  </span>
                   <span className="truncate">
                     {urlDisplay(siteConfig.github)}
                   </span>
                 </a>
               </Button>
               <Button
-                className="justify-start h-auto py-2 px-3 font-mono-tight text-[13px] bg-[#0d65c3] text-white hover:bg-[#0a54a0]"
+                className="justify-start h-auto py-2 px-3 font-mono-tight text-[13px] text-[#0a54a0] bg-card border border-[#0d65c3] hover:bg-sky-100 h-11 w-full sm:h-9 dark:hover:bg-[#0a54a0]/20"
                 asChild
               >
                 <a
@@ -199,8 +201,9 @@ export function Contact() {
 
             <Button
               type="submit"
+              variant="outline"
               disabled={isSubmitting || isSubmitted}
-              className="self-start font-mono-tight text-[12px] h-9 px-4 rounded-md"
+              className="self-start font-mono-tight text-[12px] h-9 px-4 rounded-md text-brand-ink border-brand hover:bg-brand-soft hover:text-brand-ink"
             >
               {isSubmitted ? (
                 <>

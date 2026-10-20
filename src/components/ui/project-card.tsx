@@ -71,7 +71,8 @@ export function ProjectCard({
     <Collapsible open={open} onOpenChange={handleOpenChange}>
       <Card
         className={cn(
-          'rounded-lg border-border bg-card overflow-hidden transition-colors shadow-none',
+          'rounded-lg border-border bg-card overflow-hidden shadow-none',
+          'transition-[color,background-color,border-color] duration-200',
           'hover:border-muted-foreground/40'
         )}
       >
@@ -104,7 +105,7 @@ export function ProjectCard({
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="h-8 w-8 text-muted-foreground hover:text-foreground rounded-md"
+                      className="h-8 w-8 text-muted-foreground hover:text-brand-ink rounded-md"
                       asChild
                     >
                       <a
@@ -136,7 +137,7 @@ export function ProjectCard({
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="h-8 w-8 text-muted-foreground hover:text-foreground rounded-md"
+                      className="h-8 w-8 text-muted-foreground hover:text-brand-ink rounded-md"
                       asChild
                     >
                       <a
@@ -206,7 +207,7 @@ export function ProjectCard({
             <Button
               variant="outline"
               size="sm"
-              className="text-[12px] text-muted-foreground hover:text-foreground h-7 px-[10px] rounded-md"
+              className="project-link group text-[12px] h-7 px-[10px] rounded-md border-border hover:border-brand/50 hover:bg-brand-soft"
               onClick={() => {
                 onOpenLightbox(title, screenshots);
                 trackEvent({
@@ -220,6 +221,9 @@ export function ProjectCard({
             >
               <Crop className="h-3 w-3 mr-1.5" />
               View Screenshots ({screenshots.length})
+              <span className="project-link-arrow" aria-hidden="true">
+                →
+              </span>
             </Button>
           )}
         </CardFooter>

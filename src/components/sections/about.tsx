@@ -35,10 +35,10 @@ export function About() {
           {aboutStats.map((stat) => (
             <Card
               key={stat.label}
-              className="rounded-none border-0 shadow-none bg-card"
+              className="rounded-none border-0 shadow-none bg-card select-none"
             >
               <CardContent className="py-5 px-5 text-center p-6 pt-6">
-                <span className="text-[22px] font-semibold tracking-[-0.02em] text-foreground block">
+                <span className="text-[22px] font-semibold tracking-[-0.02em] text-brand block">
                   {stat.number}
                 </span>
                 <div className="text-[12px] uppercase tracking-[0.08em] text-muted-foreground mt-1">

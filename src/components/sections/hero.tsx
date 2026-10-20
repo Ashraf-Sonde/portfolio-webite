@@ -35,9 +35,9 @@ export function Hero() {
     <section id="hero" className="py-[60px]">
       <div className="max-w-content mx-auto px-6 md:px-0">
         <Badge
-          variant="secondary"
+          variant="outline"
           className={cn(
-            'status-dot fade-up  text-[12px] text-muted-foreground bg-card border border-border rounded-full px-3 py-[5px] tracking-[0.04em] mb-6 font-normal'
+            'status-dot fade-up text-[12px] text-brand-ink border border-brand bg-brand-soft rounded-full px-3 py-[5px] tracking-[0.04em] mb-6 font-normal select-none'
           )}
         >
           {siteConfig.status}
@@ -57,7 +57,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <div className="h-12.5 flex items-center text-base text-balance text-[--dot-active] mb-8 leading-[1.5]">
+        <div className="h-12.5 flex items-center text-base text-balance text-brand-ink mb-8 leading-[1.5]">
           <span
             key={currentIndex}
             className="tagline-rotate-in block truncate"
@@ -69,15 +69,15 @@ export function Hero() {
 
         <p className="fade-up fade-up-3 text-base text-justify text-muted-foreground max-w-[100%] leading-[1.5] mb-9">
           I design and lead{' '}
-          <strong className="text-foreground font-medium">
+          <strong className="text-foreground font-medium hero-emphasis">
             high-scale systems
           </strong>{' '}
           with a focus on reliability, latency, and operational clarity — translating{' '}
-          <strong className="text-foreground font-medium">
+          <strong className="text-foreground font-medium hero-emphasis">
             technical decisions into measurable business outcomes
           </strong>
           . I take end-to-end ownership of products, ensuring{' '}
-          <strong className="text-foreground font-medium">
+          <strong className="text-foreground font-medium hero-emphasis">
             engineering excellence
           </strong>{' '}
           drives real impact.
@@ -89,7 +89,8 @@ export function Hero() {
             <TooltipTrigger asChild>
               <Button
                 asChild
-                className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center"
+                variant="outline"
+                className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center text-brand-ink border border-brand hover:bg-brand-soft hover:text-brand-ink"
               >
                 <a
                   href={siteConfig.github}
@@ -115,7 +116,8 @@ export function Hero() {
             <TooltipTrigger asChild>
               <Button
                 asChild
-                className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center bg-[#0d65c3] text-white hover:bg-[#0a54a0]"
+                variant="outline"
+                className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center text-brand-ink border border-brand hover:bg-brand-soft hover:text-brand-ink"
               >
                 <a
                   href={siteConfig.linkedin}
@@ -142,7 +144,17 @@ export function Hero() {
             <TooltipTrigger asChild>
               <Button
                 asChild
-                className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-amber-500 hover:bg-amber-500/90 text-black"
+                variant="outline"
+                className="
+                  text-[14px]
+                  h-11 w-full sm:h-9 sm:w-auto sm:px-4
+                  rounded-md
+                  justify-center
+                  text-brand-ink
+                  border border-brand
+                  hover:bg-brand-soft
+                  hover:text-brand-ink
+                "
               >
                 <a
                   href="#contact"

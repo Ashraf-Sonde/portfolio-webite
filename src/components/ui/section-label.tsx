@@ -11,12 +11,12 @@ export function SectionLabel({ children, className }: SectionLabelProps) {
     <h2
       className={cn(
         'section-label font-mono-tight text-[12px] uppercase tracking-[0.12em]',
-        'text-[var(--text-dim)] mb-8 flex items-center gap-[10px] font-normal',
+        'text-brand-ink mb-8 flex items-center gap-[10px] font-normal',
         className
       )}
     >
       {children}
-      <Separator className="flex-1" />
+      <Separator className="flex-1 bg-brand-soft" />
     </h2>
   );
 }

@@ -15,15 +15,21 @@ const config: Config = {
       },
       colors: {
         bg: {
-          DEFAULT: '#0a0a0a',
-          card: '#111111',
-          hover: '#1a1a1a',
+          DEFAULT: 'var(--bg)',
+          card: 'var(--bg-card)',
+          hover: 'var(--bg-hover)',
         },
         border: 'hsl(var(--border))',
         text: {
-          DEFAULT: '#e5e5e5',
-          muted: '#a1a1a1',
-          dim: '#666666',
+          DEFAULT: 'var(--text)',
+          muted: 'var(--text-muted)',
+          dim: 'var(--text-dim)',
+        },
+        brand: {
+          DEFAULT: 'var(--brand)',
+          ink: 'var(--brand-ink)',
+          soft: 'var(--brand-soft)',
+          on: 'var(--brand-on-brand)',
         },
         tag: {
           bg: 'var(--tag-bg)',
@@ -31,7 +37,7 @@ const config: Config = {
           text: 'var(--tag-text)',
         },
         dot: {
-          active: '#22c55e',
+          active: 'var(--brand)',
         },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',

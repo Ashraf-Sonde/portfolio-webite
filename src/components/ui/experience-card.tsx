@@ -10,6 +10,7 @@ import {
   CollapsibleTrigger,
 } from '@/components/ui/collapsible';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 interface AccordionCardProps {
   icon: React.ReactNode;
@@ -32,11 +33,17 @@ export function ExperienceCard({
 
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
-      <Card className="rounded-lg border-border bg-card overflow-hidden my-3 last:mb-0 shadow-none">
+      <Card
+      className={cn(
+        'rounded-lg border-border bg-card overflow-hidden shadow-none my-3 last:mb-0',
+        'transition-[color,background-color,border-color] duration-200',
+        'hover:border-muted-foreground/40'
+      )}
+      >
         <CollapsibleTrigger asChild>
           <Button
             variant="ghost"
-            className="w-full flex items-start justify-between px-5 py-4 gap-3 text-left h-auto hover:bg-accent/50 rounded-none"
+            className="w-full flex items-start justify-between px-5 py-4 pb-[14px] gap-3 text-left h-auto hover:bg-accent/50 rounded-none"
           >
             <div className="w-8 h-8 flex size-6 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground border border-muted-foreground/15">
               {icon}
@@ -66,7 +73,7 @@ export function ExperienceCard({
                   key={i}
                   className="text-[14px] text-justify text-foreground leading-[1.7] pl-[18px] relative mb-[10px] last:mb-0"
                 >
-                  <span className="absolute left-0 top-0 text-muted-foreground/70">
+                  <span className="absolute left-0 top-0 text-brand">
                     ▸
                   </span>
                   {b}

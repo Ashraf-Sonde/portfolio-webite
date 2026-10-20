@@ -63,7 +63,7 @@ export function Nav() {
                 properties: { section: 'about' },
               });
             }}
-            className="hidden sm:flex text-[13px] text-muted-foreground hover:text-foreground h-8 px-[10px] rounded-md"
+            className="hidden sm:flex text-[13px] text-muted-foreground hover:text-brand-ink hover:bg-transparent h-8 px-[10px] rounded-md"
           >
             About
           </Button>
@@ -77,7 +77,7 @@ export function Nav() {
                 properties: { section: 'experience' },
               });
             }}
-            className="hidden sm:flex text-[13px] text-muted-foreground hover:text-foreground h-8 px-[10px] rounded-md"
+            className="hidden sm:flex text-[13px] text-muted-foreground hover:text-brand-ink hover:bg-transparent h-8 px-[10px] rounded-md"
           >
             Work
           </Button>
@@ -91,7 +91,7 @@ export function Nav() {
                 properties: { section: 'projects' },
               });
             }}
-            className="hidden sm:flex text-[13px] text-muted-foreground hover:text-foreground h-8 px-[10px] rounded-md"
+            className="hidden sm:flex text-[13px] text-muted-foreground hover:text-brand-ink hover:bg-transparent h-8 px-[10px] rounded-md"
           >
             Projects
           </Button>
@@ -105,7 +105,7 @@ export function Nav() {
                 properties: { section: 'skills' },
               });
             }}
-            className="hidden sm:flex text-[13px] text-muted-foreground hover:text-foreground h-8 px-[10px] rounded-md"
+            className="hidden sm:flex text-[13px] text-muted-foreground hover:text-brand-ink hover:bg-transparent h-8 px-[10px] rounded-md"
           >
             Skills
           </Button>
@@ -119,7 +119,7 @@ export function Nav() {
                 properties: { section: 'contact' },
               });
             }}
-            className="hidden sm:flex text-[13px] text-muted-foreground hover:text-foreground h-8 px-[10px] rounded-md"
+            className="hidden sm:flex text-[13px] text-muted-foreground hover:text-brand-ink hover:bg-transparent h-8 px-[10px] rounded-md"
           >
             Contact
           </Button>

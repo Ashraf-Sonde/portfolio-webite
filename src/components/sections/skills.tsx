@@ -2,6 +2,7 @@ import { skills } from '@/lib/data';
 import { SectionLabel } from '@/components/ui/section-label';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import {
   Boxes,
   Braces,
@@ -31,11 +32,11 @@ function renderTechIcon(icon: string, name: string) {
       <img
         src={icon}
         alt={name}
-        className={
-          isMonochrome
-            ? 'h-4 w-4 object-contain dark:invert'
-            : 'h-4 w-4 object-contain'
-        }
+        className={cn(
+          'h-4 w-4 object-contain grayscale opacity-80 transition-[filter,opacity] duration-200',
+          'group-hover:grayscale-0 group-focus-within:grayscale-0 group-hover:opacity-100 group-focus-within:opacity-100',
+          isMonochrome && 'dark:invert'
+        )}
         loading="lazy"
       />
     );
@@ -79,7 +80,7 @@ export function Skills() {
                       key={t.name}
                       asChild
                       variant="outline"
-                      className="h-8 rounded-lg border-border/80 bg-background/50 px-2 text-sm font-normal text-foreground hover:bg-accent/40 hover:text-foreground"
+                      className="group h-8 rounded-lg border-border/80 bg-background/50 px-2 text-sm font-normal text-foreground hover:bg-accent/40 hover:text-foreground"
                     >
                       <a
                         href={t.url}
