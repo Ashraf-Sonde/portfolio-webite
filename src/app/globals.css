@@ -4,10 +4,10 @@
 
 @layer base {
   :root {
-    --brand: #ff7a59;
-    --brand-ink: #ff7a59;
-    --brand-soft: #2a1612;
-    --brand-on-brand: #0e0e10;
+    --brand: #7fb0cf;         
+    --brand-ink: #a6cbe2;
+    --brand-soft: #111a20;
+    --brand-on-brand: #08131a;
     --bg: #0e0e10;
     --bg-card: #1a1a1a;
     --bg-hover: #1a1a1a;
@@ -52,10 +52,10 @@
   }
 
   .light {
-    --brand: #e8553a;
-    --brand-ink: #c63d1e;
-    --brand-soft: #fdeeea;
-    --brand-on-brand: #1a1a1a;
+    --brand: #2f6682;
+    --brand-ink: #255268;
+    --brand-soft: #e8f2f7;
+    --brand-on-brand: #ffffff;
     --bg: #fafaf9;
     --bg-card: #fafafa;
     --bg-hover: #f4f4f5;
