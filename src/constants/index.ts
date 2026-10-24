@@ -10,3 +10,11 @@ export const EVENT_NAMES = [
   'project_github_clicked',
   'project_screenshots_viewed',
 ] as const;
+
+export const navItems = [
+  { label: 'About', id: '#about', section: 'about' },
+  { label: 'Work', id: '#experience', section: 'experience' },
+  { label: 'Projects', id: '#projects', section: 'projects' },
+  { label: 'Skills', id: '#skills', section: 'skills' },
+  { label: 'Contact', id: '#contact', section: 'contact' },
+] as const;
