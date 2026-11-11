@@ -61,7 +61,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <div className="h-12.5 flex items-center text-base text-balance text-brand-ink mb-8 leading-[1.5]">
+        <div className="h-12.5 flex items-center text-base text-balance text-brand-ink mb-8 leading-normal">
           <span
             key={currentIndex}
             className="tagline-rotate-in block truncate"
@@ -71,7 +71,7 @@ export function Hero() {
           </span>
         </div>
 
-        <p className="fade-up fade-up-3 text-base text-justify text-muted-foreground max-w-[100%] leading-[1.5] mb-9">
+        <p className="fade-up fade-up-3 text-base text-justify text-muted-foreground max-w-full leading-normal mb-9">
           I design and lead{' '}
           <strong className="text-foreground font-medium hero-emphasis">
             high-scale systems
@@ -91,7 +91,7 @@ export function Hero() {
           <div className='from-background pointer-events-none absolute inset-y-0 left-0 z-1 w-16 bg-linear-to-r to-transparent sm:w-35' />
           <div className='from-background pointer-events-none absolute inset-y-0 right-0 z-1 w-16 bg-linear-to-l to-transparent sm:w-35' />
           <div className='mx-auto w-full max-w-5xl overflow-hidden'>
-            <Marquee pauseOnHover duration={25} gap={2}>
+            <Marquee pauseOnHover duration={30} gap={2}>
               {skillLogos.map((logo, logoIndex) => (
                 <div
                   key={`${logo.icon}-${logoIndex}`}

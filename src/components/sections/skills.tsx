@@ -64,10 +64,10 @@ export function Skills() {
           {skills.map((group) => (
             <Card
               key={group.label}
-              className="rounded-xl border-border bg-card/90 shadow-none backdrop-blur-sm"
+              className="rounded-xl border-border bg-card/90 shadow-none backdrop-blur-xs"
             >
               <CardContent className="p-4">
-                <div className="font-mono-tight text-[12px] uppercase tracking-[0.1em] text-muted-foreground mb-3 flex items-center gap-2">
+                <div className="font-mono-tight text-[12px] uppercase tracking-widest text-muted-foreground mb-3 flex items-center gap-2">
                   {(() => {
                     const Icon = categoryIcon(group.label);
                     return <Icon className="h-4 w-4" aria-hidden="true" />;

@@ -62,7 +62,7 @@ export function Nav() {
 
   return (
     <nav
-      className="sticky top-0 z-[100] border-b border-border"
+      className="sticky top-0 z-100 border-b border-border"
       style={{
         background: 'color-mix(in srgb, var(--bg) 85%, transparent)',
         backdropFilter: 'blur(12px)',
@@ -134,7 +134,7 @@ export function Nav() {
         id="mobile-nav"
         aria-hidden={!open}
         className={cn(
-          'absolute inset-x-0 top-full z-[100] sm:hidden border border-border bg-white dark:bg-bg-card px-6 py-2 font-mono-tight m-4 rounded-lg shadow-lg transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none',
+          'absolute inset-x-0 top-full z-100 sm:hidden border border-border bg-white dark:bg-bg-card px-6 py-2 font-mono-tight m-4 rounded-lg shadow-lg transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none',
           open
             ? 'opacity-100 translate-y-0'
             : 'pointer-events-none opacity-0 -translate-y-1'

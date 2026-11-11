@@ -110,7 +110,7 @@ export function Lightbox({ isOpen, title, images, onClose }: LightboxProps) {
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogPortal>
         <DialogOverlay
-          className="bg-black/88 backdrop-blur-sm cursor-default"
+          className="bg-black/88 backdrop-blur-xs cursor-default"
           onClick={onClose}
         />
         <DialogPrimitive.Content
@@ -123,7 +123,7 @@ export function Lightbox({ isOpen, title, images, onClose }: LightboxProps) {
           )}
           onClick={(e) => e.target === e.currentTarget && onClose()}
         >
-          <div className="flex items-center justify-between px-[18px] py-[14px] flex-shrink-0 border-b border-border">
+          <div className="flex items-center justify-between px-[18px] py-[14px] shrink-0 border-b border-border">
             <span className="font-mono-tight text-[12px] text-muted-foreground tracking-wide">
               {title}
               <span className="text-muted-foreground/80 ml-2">
@@ -222,7 +222,7 @@ export function Lightbox({ isOpen, title, images, onClose }: LightboxProps) {
             </span>
           </div>
 
-          <div className="flex gap-2 px-[18px] py-3 border-t border-border overflow-x-auto flex-shrink-0">
+          <div className="flex gap-2 px-[18px] py-3 border-t border-border overflow-x-auto shrink-0">
             {images.map((img, i) => (
               // eslint-disable-next-line @next/next/no-img-element
               <img
@@ -231,7 +231,7 @@ export function Lightbox({ isOpen, title, images, onClose }: LightboxProps) {
                 alt={img.caption}
                 onClick={() => goTo(i)}
                 className={cn(
-                  'w-[60px] h-[42px] object-cover rounded-md cursor-pointer flex-shrink-0 transition-all border-2',
+                  'w-[60px] h-[42px] object-cover rounded-md cursor-pointer shrink-0 transition-all border-2',
                   i === index
                     ? 'border-muted-foreground opacity-100'
                     : 'border-transparent opacity-55 hover:opacity-85'

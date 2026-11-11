@@ -30,7 +30,7 @@ export function Experience() {
                 </span>
                 {company.active && (
                   <span
-                    className="w-[7px] h-[7px] rounded-full flex-shrink-0 bg-brand"
+                    className="w-[7px] h-[7px] rounded-full shrink-0 bg-brand"
                     style={{
                       boxShadow: '0 0 6px var(--brand)',
                     }}

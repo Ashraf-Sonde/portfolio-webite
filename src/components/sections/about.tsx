@@ -8,7 +8,7 @@ export function About() {
       <div className="max-w-content mx-auto px-6 lg:px-0">
         <SectionLabel>About</SectionLabel>
 
-        <p className="text-base text-justify text-muted-foreground leading-[1.8] max-w-[100%]">
+        <p className="text-base text-justify text-muted-foreground leading-[1.8] max-w-full">
           I&apos;m a{' '}
           <strong className="text-foreground font-medium">
             backend-focused engineer with {aboutStats[0].number}{' '}
@@ -20,7 +20,7 @@ export function About() {
           infrastructure that holds it all together.
         </p>
 
-        <p className="text-base text-justify text-muted-foreground leading-[1.8] max-w-[100%] mt-[1rem]">
+        <p className="text-base text-justify text-muted-foreground leading-[1.8] max-w-full mt-4">
           I understand{' '}
           <strong className="text-foreground font-medium">
             system design tradeoffs

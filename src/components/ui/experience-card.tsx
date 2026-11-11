@@ -56,7 +56,7 @@ export function ExperienceCard({
                 {meta}
               </div>
             </div>
-            <div className="text-muted-foreground flex-shrink-0 w-4 h-4 flex items-center justify-center mt-[2px]">
+            <div className="text-muted-foreground shrink-0 w-4 h-4 flex items-center justify-center mt-[2px]">
               {open ? (
                 <ChevronsDownUp className="h-4 w-4" />
               ) : (
