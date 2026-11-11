@@ -408,7 +408,7 @@ export const skills = [
       },
       {
         name: 'Wordpress',
-        url: 'hhttps://wordpress.com/',
+        url: 'https://wordpress.com/',
         icon: 'https://cdn.simpleicons.org/wordpress/21759B',
       },
       {
