@@ -12,8 +12,12 @@ import {
 import { Github, Download, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { trackEvent } from '@/lib/events';
+import { Marquee } from '@/components/ui/marquee';
+import { skills } from '@/lib/data';
 
 const TAGLINE_INTERVAL_MS = 3000;
+
+const skillLogos = skills.flatMap((group) => group.tags);
 
 const taglines = Array.isArray(siteConfig.tagline)
   ? siteConfig.tagline
@@ -83,123 +87,21 @@ export function Hero() {
           drives real impact.
         </p>
 
-        <div className="fade-up fade-up-4 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-[10px]">
-          {/* Github btn */}
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                asChild
-                variant="outline"
-                className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center text-brand-ink border border-brand hover:bg-brand-soft hover:text-brand-ink"
-              >
-                <a
-                  href={siteConfig.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() =>
-                    trackEvent({
-                      name: 'hero_cta_clicked',
-                      properties: { cta: 'github' },
-                    })
-                  }
+        <div className='relative mx-auto mt-10 mb-10 w-full max-w-5xl'>
+          <div className='from-background pointer-events-none absolute inset-y-0 left-0 z-1 w-16 bg-linear-to-r to-transparent sm:w-35' />
+          <div className='from-background pointer-events-none absolute inset-y-0 right-0 z-1 w-16 bg-linear-to-l to-transparent sm:w-35' />
+          <div className='mx-auto w-full max-w-5xl overflow-hidden'>
+            <Marquee pauseOnHover duration={25} gap={2}>
+              {skillLogos.map((logo, logoIndex) => (
+                <div
+                  key={`${logo.icon}-${logoIndex}`}
+                  className='bg-muted flex size-16 shrink-0 items-center justify-center rounded-md'
                 >
-                  <Github className="h-3.5 w-3.5 mr-1.5 shrink-0" />
-                  <span className="truncate">GitHub</span>
-                </a>
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>View github</TooltipContent>
-          </Tooltip>
-
-          {/* LinkedIn btn */}
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                asChild
-                variant="outline"
-                className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md justify-center text-brand-ink border border-brand hover:bg-brand-soft hover:text-brand-ink"
-              >
-                <a
-                  href={siteConfig.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center"
-                  onClick={() =>
-                    trackEvent({
-                      name: 'hero_cta_clicked',
-                      properties: { cta: 'linkedin' },
-                    })
-                  }
-                >
-                  <span className="mr-1.5 shrink-0 text-base">in</span>
-                  <span className="truncate">LinkedIn</span>
-                </a>
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>Connect on linkedin</TooltipContent>
-          </Tooltip>
-
-          {/* Contact btn */}
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                asChild
-                variant="outline"
-                className="
-                  text-[14px]
-                  h-11 w-full sm:h-9 sm:w-auto sm:px-4
-                  rounded-md
-                  justify-center
-                  text-brand-ink
-                  border border-brand
-                  hover:bg-brand-soft
-                  hover:text-brand-ink
-                "
-              >
-                <a
-                  href="#contact"
-                  className="flex items-center justify-center"
-                  onClick={() =>
-                    trackEvent({
-                      name: 'hero_cta_clicked',
-                      properties: { cta: 'contact' },
-                    })
-                  }
-                >
-                  <Mail className="h-3.5 w-3.5 mr-1.5 shrink-0" />
-                  <span className="truncate">Contact</span>
-                </a>
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>Get in touch</TooltipContent>
-          </Tooltip>
-
-          {/* Resume btn */}
-          {siteConfig.resume && (
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  asChild
-                  className="text-[14px] h-11 w-full sm:h-9 sm:w-auto sm:px-4 rounded-md text-muted-foreground justify-center bg-neutral-500 hover:bg-neutral-500/90 text-white"
-                >
-                  <a
-                    href={siteConfig.resume}
-                    className="flex items-center justify-center"
-                    onClick={() =>
-                      trackEvent({
-                        name: 'hero_cta_clicked',
-                        properties: { cta: 'resume' },
-                      })
-                    }
-                  >
-                    <Download className="h-3.5 w-3.5 mr-1.5 shrink-0" />
-                    <span className="truncate">Resume</span>
-                  </a>
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent>View resume</TooltipContent>
-            </Tooltip>
-          )}
+                  <img src={logo.icon} alt={logo.name} loading='lazy' className='size-10 object-contain grayscale' />
+                </div>
+              ))}
+            </Marquee>
+          </div>
         </div>
       </div>
     </section>

@@ -270,6 +270,18 @@
   .tagline-rotate-in {
     animation: taglineFadeIn 0.5s ease-in-out forwards;
   }
+
+  @keyframes marquee-horizontal {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--marquee-gap)));
+    }
+  }
+  .animate-marquee-horizontal {
+    animation: marquee-horizontal var(--marquee-duration) infinite linear;
+  }
 }
 
 @layer base {
