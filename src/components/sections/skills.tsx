@@ -56,7 +56,7 @@ function categoryIcon(label: string) {
 
 export function Skills() {
   return (
-    <section id="skills" className="py-[60px]">
+    <section id="skills" className="py-8 py-12">
       <div className="max-w-content mx-auto px-6 lg:px-0">
         <SectionLabel>Stack</SectionLabel>
 

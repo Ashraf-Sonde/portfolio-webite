@@ -18,7 +18,7 @@ export function Projects() {
   }
 
   return (
-    <section id="projects" className="py-[60px]">
+    <section id="projects" className="py-8 py-12">
       <div className="max-w-content mx-auto px-6 lg:px-0">
         <SectionLabel>Projects ({projects.length})</SectionLabel>
 

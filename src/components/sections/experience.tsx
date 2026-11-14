@@ -8,7 +8,7 @@ import { getIcon } from '@/lib/utils';
 // Experience section component
 export function Experience() {
   return (
-    <section id="experience" className="py-[60px]">
+    <section id="experience" className="py-8 py-12">
       <div className="max-w-content mx-auto px-6 lg:px-0">
         <SectionLabel>Work Experience</SectionLabel>
 

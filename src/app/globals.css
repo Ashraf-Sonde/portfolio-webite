@@ -220,7 +220,7 @@
 
 @utility tagline-rotate-in {
   /* Rotating tagline: fade-in on each change */
-  animation: taglineFadeIn 0.5s ease-in-out forwards;
+  animation: taglineFadeIn 0.45s ease-in-out forwards;
 }
 
 @utility animate-marquee-horizontal {
@@ -405,11 +405,11 @@
   @keyframes taglineFadeIn {
     from {
       opacity: 0;
-      transform: translateY(-1px);
+      transform: translateY(10);
     }
     to {
       opacity: 1;
-      transform: translateY(10);
+      transform: translateY(0px);
     }
   }
 

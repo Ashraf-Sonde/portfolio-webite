@@ -4,20 +4,24 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export function About() {
   return (
-    <section id="about" className="py-[60px]">
+    <section id="about" className="py-8 py-12">
       <div className="max-w-content mx-auto px-6 lg:px-0">
         <SectionLabel>About</SectionLabel>
 
         <p className="text-base text-justify text-muted-foreground leading-[1.8] max-w-full">
-          I&apos;m a{' '}
+        I design and lead{' '}
           <strong className="text-foreground font-medium">
-            backend-focused engineer with {aboutStats[0].number}{' '}
-            {aboutStats[0].label} of experience
+            high-scale systems
           </strong>{' '}
-          designing systems that are fast, predictable, and operationally
-          simple. I&apos;ve spent most of that time on the server side —
-          distributed services, API design, data pipelines, and the
-          infrastructure that holds it all together.
+          with a focus on reliability, latency, and operational clarity — translating{' '}
+          <strong className="text-foreground font-medium">
+            technical decisions into measurable business outcomes
+          </strong>
+          . I take end-to-end ownership of products, ensuring{' '}
+          <strong className="text-foreground font-medium">
+            engineering excellence
+          </strong>{' '}
+          drives real impact.
         </p>
 
         <p className="text-base text-justify text-muted-foreground leading-[1.8] max-w-full mt-4">

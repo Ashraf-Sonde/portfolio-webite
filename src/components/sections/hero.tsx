@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { siteConfig } from '@/lib/data';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -36,58 +37,54 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="py-[60px]">
+    <section id="hero" className="py-8 sm:py-12">
       <div className="max-w-content mx-auto px-6 lg:px-0">
-        <Badge
-          variant="outline"
-          className={cn(
-            'status-dot fade-up text-[12px] text-brand-ink border border-brand bg-brand-soft rounded-full px-3 py-[5px] tracking-[0.04em] mb-6 font-normal select-none'
-          )}
-        >
-          {siteConfig.status}
-        </Badge>
-
-        <div className="hero-eyebrow fade-up fade-up-1  text-[14px] text-muted-foreground/80 tracking-[0.08em] mb-5 flex items-center gap-2">
-          {siteConfig.title}
-        </div>
-
-        <h1
-          className="fade-up fade-up-2 font-semibold tracking-[-0.03em] leading-[1.1] text-foreground"
-          style={{ fontSize: 'clamp(36px, 6vw, 56px)' }}
-        >
-          {siteConfig.name.split(' ')[0]}{' '}
-          <span className="text-muted-foreground font-light">
-            {siteConfig.name.split(' ')[1]}
-          </span>
-        </h1>
-
-        <div className="h-12.5 flex items-center text-base text-balance text-brand-ink mb-8 leading-normal">
-          <span
-            key={currentIndex}
-            className="tagline-rotate-in block truncate"
-            title={taglines[currentIndex]}
+        <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:gap-12">
+          {/* Profile image */}
+          <div
+            className="relative h-44 w-44 shrink-0 overflow-hidden rounded-[2rem]
+            bg-[#E9ECF2] shadow-[0_12px_35px_rgba(15,23,42,0.08)]
+            sm:h-48 sm:w-48 lg:h-[240px] lg:w-[240px]"
           >
-            {taglines[currentIndex]}
-          </span>
+            <Image
+              src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
+              alt="Profile image"
+              fill
+              loading='lazy'
+              sizes="(max-width: 640px) 176px, (max-width: 1024px) 192px, 240px"
+              className="object-cover object-center"
+            />
+          </div>
+
+          {/* Existing text content */}
+          <div className="min-w-0 flex-1">
+            <div className="fade-up fade-up-1 text-sm text-muted-foreground/80 tracking-[0.08em] mb-1 flex items-center gap-2">
+              {siteConfig.title}
+            </div>
+
+            <h1
+              className="fade-up fade-up-2 font-semibold tracking-[-0.03em] leading-[1.1] text-foreground"
+              style={{ fontSize: 'clamp(36px, 4vw, 48px)' }}
+            >
+              {siteConfig.name.split(' ')[0]}{' '}
+              <span className="text-muted-foreground font-light">
+                {siteConfig.name.split(' ')[1]}
+              </span>
+            </h1>
+
+            <div className="h-8 flex items-center text-sm sm:text-base text-balance text-brand-ink leading-normal">
+              <span
+                key={currentIndex}
+                className="tagline-rotate-in block truncate"
+                title={taglines[currentIndex]}
+              >
+                {taglines[currentIndex]}
+              </span>
+            </div>
+          </div>
         </div>
 
-        <p className="fade-up fade-up-3 text-base text-justify text-muted-foreground max-w-full leading-normal mb-9">
-          I design and lead{' '}
-          <strong className="text-foreground font-medium hero-emphasis">
-            high-scale systems
-          </strong>{' '}
-          with a focus on reliability, latency, and operational clarity — translating{' '}
-          <strong className="text-foreground font-medium hero-emphasis">
-            technical decisions into measurable business outcomes
-          </strong>
-          . I take end-to-end ownership of products, ensuring{' '}
-          <strong className="text-foreground font-medium hero-emphasis">
-            engineering excellence
-          </strong>{' '}
-          drives real impact.
-        </p>
-
-        <div className='relative mx-auto mt-10 mb-10 w-full max-w-5xl'>
+        <div className='relative mx-auto mt-6 sm:mt-10 w-full max-w-5xl'>
           <div className='from-background pointer-events-none absolute inset-y-0 left-0 z-1 w-16 bg-linear-to-r to-transparent sm:w-35' />
           <div className='from-background pointer-events-none absolute inset-y-0 right-0 z-1 w-16 bg-linear-to-l to-transparent sm:w-35' />
           <div className='mx-auto w-full max-w-5xl overflow-hidden'>
