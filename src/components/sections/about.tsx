@@ -8,7 +8,7 @@ export function About() {
       <div className="max-w-content mx-auto px-6 lg:px-0">
         <SectionLabel>About</SectionLabel>
 
-        <p className="text-base text-justify text-muted-foreground leading-[1.8] max-w-full">
+        <p className="text-sm sm:text-base text-muted-foreground leading-[1.5] max-w-full">
         I design and lead{' '}
           <strong className="text-foreground font-medium">
             high-scale systems
@@ -24,7 +24,7 @@ export function About() {
           drives real impact.
         </p>
 
-        <p className="text-base text-justify text-muted-foreground leading-[1.8] max-w-full mt-4">
+        <p className="text-sm sm:text-base text-justify text-muted-foreground leading-[1.5] max-w-full mt-4">
           I understand{' '}
           <strong className="text-foreground font-medium">
             system design tradeoffs

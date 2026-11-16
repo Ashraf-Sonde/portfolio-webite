@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: 'Ashraf Sonde',
   initials: 'AS',
+  profilePic: '/assets/profile-pic.webp',
   domain: 'ashrafsonde.me',
   title: 'Senior Software Engineer',
   tagline: [
@@ -10,7 +11,7 @@ export const siteConfig = {
   ],
   description:
     'Senior Software Engineer specializing in scalable distributed systems, backend architecture, and platform reliability.',
-  status: 'Open to backend & platform roles',
+  status: 'Open to backend & platform roles', // Note: not in use currently
   github: 'https://github.com/Ashraf-Sonde',
   linkedin: 'https://linkedin.com/in/ashraf-sonde',
   email: 'b3V0cmVhY2guYXNocmFmQGdtYWlsLmNvbQ==',

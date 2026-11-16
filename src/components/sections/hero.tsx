@@ -47,12 +47,12 @@ export function Hero() {
             sm:h-48 sm:w-48 lg:h-[240px] lg:w-[240px]"
           >
             <Image
-              src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
+              src={siteConfig.profilePic}
               alt="Profile image"
               fill
               loading='lazy'
               sizes="(max-width: 640px) 176px, (max-width: 1024px) 192px, 240px"
-              className="object-cover object-center"
+              className="object-cover object-center scale-115"
             />
           </div>
 
