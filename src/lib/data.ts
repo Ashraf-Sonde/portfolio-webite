@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: 'Ashraf Sonde',
   initials: 'AS',
+  profilePic: '/assets/profile-pic.webp',
   domain: 'ashrafsonde.me',
   title: 'Senior Software Engineer',
   tagline: [
@@ -10,7 +11,7 @@ export const siteConfig = {
   ],
   description:
     'Senior Software Engineer specializing in scalable distributed systems, backend architecture, and platform reliability.',
-  status: 'Open to backend & platform roles',
+  status: 'Open to backend & platform roles', // Note: not in use currently
   github: 'https://github.com/Ashraf-Sonde',
   linkedin: 'https://linkedin.com/in/ashraf-sonde',
   email: 'b3V0cmVhY2guYXNocmFmQGdtYWlsLmNvbQ==',
@@ -18,9 +19,10 @@ export const siteConfig = {
 };
 
 export const aboutStats = [
-  { number: '5+', label: 'Years' },
-  { number: '4', label: 'Companies' },
-  { number: '12+', label: 'Projects' },
+  { number: 5, label: 'Years' },
+  { number: 10, label: 'Industries' },
+  { number: 12, label: 'Products shipped' },
+  { number: 20000, label: 'Users served' },
 ];
 
 export const experience = [
@@ -307,8 +309,7 @@ export const projects = [
     id: 'ozone',
     title: 'Ozone electric website',
     icon: '/assets/projects/logos/ozone.png',
-    tagline:
-      'Custom marketing website for Ozone electric',
+    tagline: 'Custom marketing website for Ozone electric',
     defaultOpen: false,
     github: '',
     website: 'https://ozoneelectric.in/',

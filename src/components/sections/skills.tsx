@@ -26,7 +26,10 @@ const lucideIcons: Record<string, LucideIcon> = {
 function renderTechIcon(icon: string, name: string) {
   if (icon.startsWith('https') || icon.startsWith('/')) {
     const isMonochrome =
-      name === 'Next.js' || name === 'Shadcn/UI' || name === 'AWS' || name === 'Cursor';
+      name === 'Next.js' ||
+      name === 'Shadcn/UI' ||
+      name === 'AWS' ||
+      name === 'Cursor';
     return (
       // eslint-disable-next-line @next/next/no-img-element
       <img
@@ -56,7 +59,7 @@ function categoryIcon(label: string) {
 
 export function Skills() {
   return (
-    <section id="skills" className="py-[60px]">
+    <section id="skills" className="py-8 py-12">
       <div className="max-w-content mx-auto px-6 lg:px-0">
         <SectionLabel>Stack</SectionLabel>
 
@@ -64,10 +67,10 @@ export function Skills() {
           {skills.map((group) => (
             <Card
               key={group.label}
-              className="rounded-xl border-border bg-card/90 shadow-none backdrop-blur-sm"
+              className="rounded-xl border-border bg-card/90 shadow-none backdrop-blur-xs"
             >
               <CardContent className="p-4">
-                <div className="font-mono-tight text-[12px] uppercase tracking-[0.1em] text-muted-foreground mb-3 flex items-center gap-2">
+                <div className="font-mono-tight text-[12px] uppercase tracking-widest text-muted-foreground mb-3 flex items-center gap-2">
                   {(() => {
                     const Icon = categoryIcon(group.label);
                     return <Icon className="h-4 w-4" aria-hidden="true" />;
@@ -89,7 +92,9 @@ export function Skills() {
                         aria-label={`Open ${t.name} technology page`}
                         title={t.name}
                       >
-                        <span className="mr-1.5">{renderTechIcon(t.icon, t.name)}</span>
+                        <span className="mr-1.5">
+                          {renderTechIcon(t.icon, t.name)}
+                        </span>
                         <span>{t.name}</span>
                       </a>
                     </Button>

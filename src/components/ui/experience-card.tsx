@@ -34,11 +34,11 @@ export function ExperienceCard({
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
       <Card
-      className={cn(
-        'rounded-lg border-border bg-card overflow-hidden shadow-none my-3 last:mb-0',
-        'transition-[color,background-color,border-color] duration-200',
-        'hover:border-muted-foreground/40'
-      )}
+        className={cn(
+          'rounded-lg border-border bg-card overflow-hidden shadow-none my-3 last:mb-0',
+          'transition-[color,background-color,border-color] duration-200',
+          'hover:border-muted-foreground/40'
+        )}
       >
         <CollapsibleTrigger asChild>
           <Button
@@ -56,7 +56,7 @@ export function ExperienceCard({
                 {meta}
               </div>
             </div>
-            <div className="text-muted-foreground flex-shrink-0 w-4 h-4 flex items-center justify-center mt-[2px]">
+            <div className="text-muted-foreground shrink-0 w-4 h-4 flex items-center justify-center mt-[2px]">
               {open ? (
                 <ChevronsDownUp className="h-4 w-4" />
               ) : (
@@ -73,9 +73,7 @@ export function ExperienceCard({
                   key={i}
                   className="text-[14px] text-justify text-foreground leading-[1.7] pl-[18px] relative mb-[10px] last:mb-0"
                 >
-                  <span className="absolute left-0 top-0 text-brand">
-                    ▸
-                  </span>
+                  <span className="absolute left-0 top-0 text-brand">▸</span>
                   {b}
                 </li>
               ))}

@@ -50,7 +50,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-[60px]">
+    <section id="contact" className="py-8 py-12">
       <div className="max-w-content mx-auto px-6 lg:px-0">
         <SectionLabel>Contact</SectionLabel>
 
