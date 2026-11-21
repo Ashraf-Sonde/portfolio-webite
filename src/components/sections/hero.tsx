@@ -14,6 +14,9 @@ import { Github, Download, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { trackEvent } from '@/lib/events';
 import { Marquee } from '@/components/ui/marquee';
+import {
+  TextGenerateEffect,
+} from "@/components/ui/text-generate-effect";
 import { skills } from '@/lib/data';
 
 const TAGLINE_INTERVAL_MS = 3000;
@@ -57,31 +60,32 @@ export function Hero() {
           </div>
 
           {/* Existing text content */}
-          <div className="min-w-0 flex-1">
-            <div className="fade-up fade-up-1 text-sm text-muted-foreground/80 tracking-[0.08em] mb-1 flex items-center gap-2">
-              {siteConfig.title}
-            </div>
+            <div className="min-w-0 flex-1">
+              <div className="fade-up fade-up-1 text-sm text-muted-foreground/80 tracking-[0.08em] mb-1 flex items-center gap-2">
+                {siteConfig.title}
+              </div>
 
-            <h1
-              className="fade-up fade-up-2 font-semibold tracking-[-0.03em] leading-[1.1] text-foreground"
-              style={{ fontSize: 'clamp(36px, 4vw, 48px)' }}
-            >
-              {siteConfig.name.split(' ')[0]}{' '}
-              <span className="text-muted-foreground font-light">
-                {siteConfig.name.split(' ')[1]}
-              </span>
-            </h1>
-
-            <div className="h-8 flex items-center text-sm sm:text-base text-balance text-brand-ink leading-normal">
-              <span
-                key={currentIndex}
-                className="tagline-rotate-in block truncate"
-                title={taglines[currentIndex]}
+              <h1
+                className="fade-up fade-up-2 font-semibold tracking-[-0.03em] leading-[1.1] text-foreground"
+                style={{ fontSize: 'clamp(36px, 4vw, 48px)' }}
               >
-                {taglines[currentIndex]}
-              </span>
+                <TextGenerateEffect duration={500} text={siteConfig.name.split(' ')[0]} />
+                {' '}
+                <span className="text-muted-foreground font-light">
+                  <TextGenerateEffect duration={600} text={siteConfig.name.split(' ')[1]} />
+                </span>
+              </h1>
+
+              <div className="h-8 flex items-center text-sm sm:text-base text-balance text-brand-ink leading-normal">
+                <span
+                  key={currentIndex}
+                  className="tagline-rotate-in block truncate"
+                  title={taglines[currentIndex]}
+                >
+                  {taglines[currentIndex]}
+                </span>
+              </div>
             </div>
-          </div>
         </div>
 
         <div className='relative mx-auto mt-6 sm:mt-10 w-full max-w-5xl'>

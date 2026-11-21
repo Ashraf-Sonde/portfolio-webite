@@ -431,3 +431,22 @@
     @apply bg-background text-foreground;
   }
 }
+/*
+  ---break---
+*/
+@theme inline {
+  --animate-text-generate-effect: text-generate-effect var(--text-generate-effect-duration, 1000ms) ease-out calc(var(--text-generate-effect-index, 0) * var(--text-generate-effect-stagger, 80ms)) both;
+  @keyframes text-generate-effect {
+  0% {
+    filter: blur(var(--text-generate-effect-blur, 8px));
+    opacity: 0;
+    }
+  40% {
+    opacity: 1;
+    }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+    }
+  }
+}

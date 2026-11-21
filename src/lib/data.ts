@@ -19,9 +19,10 @@ export const siteConfig = {
 };
 
 export const aboutStats = [
-  { number: '5+', label: 'Years' },
-  { number: '4', label: 'Companies' },
-  { number: '12+', label: 'Projects' },
+  { number: 5, label: 'Years' },
+  { number: 10, label: 'Industries' },
+  { number: 12, label: 'Products shipped' },
+  { number: 20000, label: 'Users served' },
 ];
 
 export const experience = [
