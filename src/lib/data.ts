@@ -309,8 +309,7 @@ export const projects = [
     id: 'ozone',
     title: 'Ozone electric website',
     icon: '/assets/projects/logos/ozone.png',
-    tagline:
-      'Custom marketing website for Ozone electric',
+    tagline: 'Custom marketing website for Ozone electric',
     defaultOpen: false,
     github: '',
     website: 'https://ozoneelectric.in/',

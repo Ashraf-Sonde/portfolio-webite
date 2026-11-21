@@ -1,10 +1,12 @@
-"use client";
+'use client';
 
-import { type ComponentProps, useEffect, useRef, useState } from "react";
-import { cn } from "@/lib/utils";
+import { type ComponentProps, useEffect, useRef, useState } from 'react';
+import { cn } from '@/lib/utils';
 
-export interface CountingNumberProps
-  extends Omit<ComponentProps<"span">, "children"> {
+export interface CountingNumberProps extends Omit<
+  ComponentProps<'span'>,
+  'children'
+> {
   /** How many digits after the decimal point, always shown. @default 0 */
   decimals?: number;
   /** How long a count takes from start to finish, in milliseconds. @default 2000 */
@@ -31,7 +33,7 @@ export interface CountingNumberProps
    *
    * @default "mount"
    */
-  trigger?: "mount" | "view";
+  trigger?: 'mount' | 'view';
   /** The number. Each new value counts on from wherever the number is. */
   value: number;
 }
@@ -93,16 +95,16 @@ export const CountingNumber = (props: CountingNumberProps) => {
     duration = 2000,
     from = 0,
     grouping = false,
-    locale = "en-US",
+    locale = 'en-US',
     onComplete,
     pad = 1,
-    trigger = "mount",
+    trigger = 'mount',
     value,
     className,
     ...rest
   } = props;
   const root = useRef<HTMLSpanElement>(null);
-  const [visible, setVisible] = useState(trigger === "mount");
+  const [visible, setVisible] = useState(trigger === 'mount');
   // The count under way: where it started, where it's going, how far along.
   const [count, setCount] = useState<Count>({ from, step: 0, to: value });
   const steps = Math.max(1, Math.round(duration / TICK));
@@ -111,7 +113,7 @@ export const CountingNumber = (props: CountingNumberProps) => {
 
   useEffect(() => {
     const node = root.current;
-    if (trigger !== "view" || !node) {
+    if (trigger !== 'view' || !node) {
       return;
     }
     const observer = new IntersectionObserver(
@@ -142,7 +144,7 @@ export const CountingNumber = (props: CountingNumberProps) => {
       return;
     }
     const reduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      '(prefers-reduced-motion: reduce)'
     ).matches;
     const timer = window.setTimeout(
       () => {
@@ -171,7 +173,7 @@ export const CountingNumber = (props: CountingNumberProps) => {
 
   return (
     <span
-      className={cn("tabular-nums", className)}
+      className={cn('tabular-nums', className)}
       data-slot="counting-number"
       ref={root}
       {...rest}

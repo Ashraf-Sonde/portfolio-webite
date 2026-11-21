@@ -26,7 +26,10 @@ const lucideIcons: Record<string, LucideIcon> = {
 function renderTechIcon(icon: string, name: string) {
   if (icon.startsWith('https') || icon.startsWith('/')) {
     const isMonochrome =
-      name === 'Next.js' || name === 'Shadcn/UI' || name === 'AWS' || name === 'Cursor';
+      name === 'Next.js' ||
+      name === 'Shadcn/UI' ||
+      name === 'AWS' ||
+      name === 'Cursor';
     return (
       // eslint-disable-next-line @next/next/no-img-element
       <img
@@ -89,7 +92,9 @@ export function Skills() {
                         aria-label={`Open ${t.name} technology page`}
                         title={t.name}
                       >
-                        <span className="mr-1.5">{renderTechIcon(t.icon, t.name)}</span>
+                        <span className="mr-1.5">
+                          {renderTechIcon(t.icon, t.name)}
+                        </span>
                         <span>{t.name}</span>
                       </a>
                     </Button>

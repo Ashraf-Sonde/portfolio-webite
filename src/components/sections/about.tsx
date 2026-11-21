@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { aboutStats } from '@/lib/data';
 import { SectionLabel } from '@/components/ui/section-label';
 import { Card, CardContent } from '@/components/ui/card';
-import { CountingNumber } from "@/components/ui/counting-number";
+import { CountingNumber } from '@/components/ui/counting-number';
 
 export function About() {
   const statsRef = useRef<HTMLDivElement>(null);
@@ -34,11 +34,12 @@ export function About() {
         <SectionLabel>About</SectionLabel>
 
         <p className="text-sm sm:text-base text-muted-foreground leading-[1.5] max-w-full">
-        I design and lead{' '}
+          I design and lead{' '}
           <strong className="text-foreground font-medium">
             high-scale systems
           </strong>{' '}
-          with a focus on reliability, latency, and operational clarity — translating{' '}
+          with a focus on reliability, latency, and operational clarity —
+          translating{' '}
           <strong className="text-foreground font-medium">
             technical decisions into measurable business outcomes
           </strong>

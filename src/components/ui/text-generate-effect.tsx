@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   type AnimationEvent,
@@ -7,11 +7,13 @@ import {
   useEffect,
   useRef,
   useState,
-} from "react";
-import { cn } from "@/lib/utils";
+} from 'react';
+import { cn } from '@/lib/utils';
 
-export interface TextGenerateEffectProps
-  extends Omit<ComponentProps<"span">, "children"> {
+export interface TextGenerateEffectProps extends Omit<
+  ComponentProps<'span'>,
+  'children'
+> {
   /** Whether each word comes into focus from a blur; `false` only fades it in. @default true */
   blur?: boolean;
   /**
@@ -33,7 +35,7 @@ export interface TextGenerateEffectProps
    *
    * @default "mount"
    */
-  trigger?: "mount" | "view";
+  trigger?: 'mount' | 'view';
 }
 
 const SPACES = /(\s+)/;
@@ -56,7 +58,7 @@ const wordsOf = (text: string) => {
 
 /** Each word: `text-generate-effect` keyframes, delayed by its index. */
 const WORD =
-  "inline-block animate-text-generate-effect group-data-[view=out]/text-generate-effect:[animation-play-state:paused] motion-reduce:animate-none [@media(scripting:none)]:animate-none";
+  'inline-block animate-text-generate-effect group-data-[view=out]/text-generate-effect:[animation-play-state:paused] motion-reduce:animate-none [@media(scripting:none)]:animate-none';
 
 /**
  * Text that appears as if it were being generated: word after word in quick
@@ -76,12 +78,12 @@ export const TextGenerateEffect = (props: TextGenerateEffectProps) => {
     onComplete,
     stagger,
     text,
-    trigger = "mount",
+    trigger = 'mount',
     className,
     ...rest
   } = props;
   const root = useRef<HTMLSpanElement>(null);
-  const [visible, setVisible] = useState(trigger === "mount");
+  const [visible, setVisible] = useState(trigger === 'mount');
   const completed = useRef(false);
   const words = wordsOf(text);
   // The last word, whose end is the whole text's.
@@ -89,7 +91,7 @@ export const TextGenerateEffect = (props: TextGenerateEffectProps) => {
 
   useEffect(() => {
     const node = root.current;
-    if (trigger !== "view" || !node) {
+    if (trigger !== 'view' || !node) {
       return;
     }
     const observer = new IntersectionObserver(
@@ -110,7 +112,7 @@ export const TextGenerateEffect = (props: TextGenerateEffectProps) => {
     if (
       visible &&
       !completed.current &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
     ) {
       completed.current = true;
       onComplete?.();
@@ -125,9 +127,9 @@ export const TextGenerateEffect = (props: TextGenerateEffectProps) => {
 
   return (
     <span
-      className={cn("group/text-generate-effect", className)}
+      className={cn('group/text-generate-effect', className)}
       data-slot="text-generate-effect"
-      data-view={visible ? "in" : "out"}
+      data-view={visible ? 'in' : 'out'}
       ref={root}
       {...rest}
     >
@@ -139,10 +141,10 @@ export const TextGenerateEffect = (props: TextGenerateEffectProps) => {
         onAnimationEnd={animationEnd}
         style={
           {
-            "--text-generate-effect-blur": blur ? undefined : "0px",
-            "--text-generate-effect-duration":
+            '--text-generate-effect-blur': blur ? undefined : '0px',
+            '--text-generate-effect-duration':
               duration === undefined ? undefined : `${duration}ms`,
-            "--text-generate-effect-stagger":
+            '--text-generate-effect-stagger':
               stagger === undefined ? undefined : `${stagger}ms`,
           } as CSSProperties
         }
@@ -153,10 +155,10 @@ export const TextGenerateEffect = (props: TextGenerateEffectProps) => {
           ) : (
             <span
               className={WORD}
-              data-last={word.word === last ? "" : undefined}
+              data-last={word.word === last ? '' : undefined}
               key={word.key}
               style={
-                { "--text-generate-effect-index": word.word } as CSSProperties
+                { '--text-generate-effect-index': word.word } as CSSProperties
               }
             >
               {word.part}
